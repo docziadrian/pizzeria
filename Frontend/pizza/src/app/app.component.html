@@ -1,0 +1,13 @@
+<div class="w-full max-w-screen-xl mx-auto">
+  <div class="m-2">
+    <app-navbar [title]="title"></app-navbar>
+    <app-notifications></app-notifications>
+    <router-outlet></router-outlet>
+    <app-footer
+      [title]="title"
+      [subtitle]="subtitle"
+      [author]="author"
+      [company]="company"
+    ></app-footer>
+  </div>
+</div>

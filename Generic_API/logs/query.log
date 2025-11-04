@@ -1,0 +1,299 @@
+[2025-10-22 12:03:35] - [32minfo[39m: server listening on port 3000
+[2025-10-22 12:03:50] - [32minfo[39m: server listening on port 3000
+[2025-10-22 12:05:50] - [32minfo[39m: server listening on port 3000
+[2025-10-22 12:06:30] - [32minfo[39m: server listening on port 3000
+[2025-10-22 12:06:32] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_katicabufe.users' doesn't exist
+[2025-10-22 12:06:43] - [32minfo[39m: server listening on port 3000
+[2025-10-22 12:06:45] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_katicabufe.users' doesn't exist
+[2025-10-22 12:06:46] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_katicabufe.users' doesn't exist
+[2025-10-22 12:06:55] - [32minfo[39m: server listening on port 3000
+[2025-10-22 12:06:57] - [36mverbose[39m: [GET//kategoria] - 3 record(s) sent. | 53 ms
+[2025-10-22 12:06:57] - [36mverbose[39m: [GET /forgalom] -> 3 rekord küldve válaszként
+[2025-10-22 12:08:08] - [32minfo[39m: server listening on port 3000
+[2025-10-22 12:14:33] - [32minfo[39m: server listening on port 3000
+[2025-10-22 12:14:54] - [32minfo[39m: server listening on port 3000
+[2025-10-22 12:15:18] - [36mverbose[39m: [GET//kategoria] - 3 record(s) sent. | 10 ms
+[2025-10-22 12:15:18] - [36mverbose[39m: [GET /kategoria] -> 3 rekord küldve válaszként
+[2025-10-22 12:15:22] - [36mverbose[39m: [GET//kategoria/3] - 1 record(s) sent. | 1 ms
+[2025-10-22 12:15:22] - [36mverbose[39m: [GET /kategoria] -> 1 rekord küldve válaszként
+[2025-10-22 12:15:47] - [32minfo[39m: server listening on port 3000
+[2025-10-22 12:17:07] - [32minfo[39m: server listening on port 3000
+[2025-10-22 12:17:54] - [32minfo[39m: server listening on port 3000
+[2025-11-03 08:12:06] - [32minfo[39m: server listening on port 3000
+[2025-11-03 09:23:25] - [32minfo[39m: server listening on port 3000
+[2025-11-03 09:28:04] - [32minfo[39m: server listening on port 3000
+[2025-11-03 09:31:12] - [32minfo[39m: server listening on port 3000
+[2025-11-03 09:31:56] - [36mverbose[39m: [POST//kategoria] - 1 record(s) affected. | 6 ms
+[2025-11-03 09:32:32] - [32minfo[39m: server listening on port 3000
+[2025-11-03 09:32:33] - [32minfo[39m: server listening on port 3000
+[2025-11-03 09:32:36] - [36mverbose[39m: [POST//kategoria] - 1 record(s) affected. | 8 ms
+[2025-11-03 09:32:36] - [36mverbose[39m: [POST /kategoria] -> undefined rekord feltöltésre került.
+[2025-11-03 09:53:08] - [32minfo[39m: server listening on port 3000
+[2025-11-03 09:53:49] - [32minfo[39m: server listening on port 3000
+[2025-11-03 09:53:53] - [32minfo[39m: server listening on port 3000
+[2025-11-03 09:59:12] - [32minfo[39m: server listening on port 3000
+[2025-11-03 09:59:52] - [32minfo[39m: server listening on port 3000
+[2025-11-03 10:00:41] - [36mverbose[39m: [POST//kategoria] - 1 record(s) affected. | 7 ms
+[2025-11-03 10:00:41] - [36mverbose[39m: [POST /kategoria] -> undefined rekord feltöltésre került.
+[2025-11-03 10:01:58] - [32minfo[39m: server listening on port 3000
+[2025-11-03 10:02:19] - [36mverbose[39m: [PATCH//kategoria/16] - 1 record(s) affected. | 10 ms
+[2025-11-03 10:02:19] - [36mverbose[39m: [POST /kategoria] -> undefined rekord feltöltésre került.
+[2025-11-03 10:02:38] - [36mverbose[39m: [GET//kategoria] - 6 record(s) sent. | 2 ms
+[2025-11-03 10:02:38] - [36mverbose[39m: [GET /kategoria] -> 6 rekord küldve válaszként
+[2025-11-03 10:04:27] - [32minfo[39m: server listening on port 3000
+[2025-11-03 10:04:34] - [32minfo[39m: server listening on port 3000
+[2025-11-03 10:08:18] - [32minfo[39m: server listening on port 3000
+[2025-11-03 10:26:38] - [32minfo[39m: server listening on port 3000
+[2025-11-03 10:58:02] - [32minfo[39m: server listening on port 3000
+[2025-11-03 11:10:04] - [32minfo[39m: server listening on port 3000
+[2025-11-03 11:10:18] - [31merror[39m: [DATABASE ERROR] -> ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' -294446298, 236050790, 1801662194, -1178700058, `sigBytes` = 20, `$super` = ...' at line 1
+[2025-11-03 11:11:03] - [32minfo[39m: server listening on port 3000
+[2025-11-03 11:11:12] - [36mverbose[39m: [POST//users/login] - 1 record(s) affected. | 7 ms
+[2025-11-03 11:11:12] - [36mverbose[39m: [GET /users] -> 1 rekord küldve válaszként
+[2025-11-03 11:16:34] - [32minfo[39m: server listening on port 3000
+[2025-11-03 11:22:03] - [32minfo[39m: server listening on port 3000
+[2025-11-03 11:23:47] - [36mverbose[39m: [POST//users/registration] - 1 record(s) affected. | 9 ms
+[2025-11-03 11:23:47] - [36mverbose[39m: [POST /users] -> undefined rekord feltöltésre került.
+[2025-11-03 11:24:01] - [36mverbose[39m: [POST//users/login] - 1 record(s) affected. | 2 ms
+[2025-11-03 11:24:01] - [36mverbose[39m: [GET /users] -> 1 rekord küldve válaszként
+[2025-11-03 11:51:01] - [32minfo[39m: server listening on port 3000
+[2025-11-03 11:52:41] - [32minfo[39m: server listening on port 3000
+[2025-11-03 11:52:42] - [32minfo[39m: server listening on port 3000
+[2025-11-03 11:55:13] - [32minfo[39m: server listening on port 3000
+[2025-11-03 12:02:45] - [32minfo[39m: server listening on port 3000
+[2025-11-03 12:02:47] - [32minfo[39m: server listening on port 3000
+[2025-11-03 12:04:54] - [32minfo[39m: server listening on port 3000
+[2025-11-03 12:05:34] - [32minfo[39m: server listening on port 3000
+[2025-11-03 12:09:03] - [32minfo[39m: server listening on port 3000
+[2025-11-03 12:19:09] - [32minfo[39m: server listening on port 3000
+[2025-11-03 12:20:27] - [32minfo[39m: server listening on port 3000
+[2025-11-03 12:21:01] - [32minfo[39m: server listening on port 3000
+[2025-11-03 12:22:19] - [32minfo[39m: server listening on port 3000
+[2025-11-03 12:23:54] - [32minfo[39m: server listening on port 3000
+[2025-11-03 12:25:01] - [32minfo[39m: server listening on port 3000
+[2025-11-03 12:26:28] - [32minfo[39m: server listening on port 3000
+[2025-11-04 08:28:07] - [32minfo[39m: server listening on port 3000
+[2025-11-04 08:28:30] - [36mverbose[39m: [GET//users] - 2 record(s) sent. | 7 ms
+[2025-11-04 08:28:30] - [36mverbose[39m: [GET /users] -> 2 rekord küldve válaszként
+[2025-11-04 08:28:30] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-04 09:24:47] - [32minfo[39m: server listening on port 3000
+[2025-11-04 10:16:35] - [36mverbose[39m: [GET//users] - 2 record(s) sent. | 8 ms
+[2025-11-04 10:16:35] - [36mverbose[39m: [GET /users] -> 2 rekord küldve válaszként
+[2025-11-04 10:16:35] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-04 10:17:18] - [32minfo[39m: server listening on port 3000
+[2025-11-04 10:18:39] - [32minfo[39m: server listening on port 3000
+[2025-11-04 10:18:40] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_pizzeria.user' doesn't exist
+[2025-11-04 10:18:49] - [32minfo[39m: server listening on port 3000
+[2025-11-04 10:18:50] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_pizzeria.user' doesn't exist
+[2025-11-04 10:21:11] - [32minfo[39m: server listening on port 3000
+[2025-11-04 10:21:13] - [36mverbose[39m: [POST//users/registration] - 0 record(s) affected. | 6 ms
+[2025-11-04 10:21:38] - [32minfo[39m: server listening on port 3000
+[2025-11-04 10:21:39] - [36mverbose[39m: [POST//users/registration] - 0 record(s) affected. | 5 ms
+[2025-11-04 10:23:05] - [32minfo[39m: server listening on port 3000
+[2025-11-04 10:23:09] - [32minfo[39m: server listening on port 3000
+[2025-11-04 10:23:11] - [36mverbose[39m: [POST//users/registration] - 0 record(s) affected. | 6 ms
+[2025-11-04 10:23:11] - [36mverbose[39m: [POST//users/registration] - 1 record(s) affected. | 3 ms
+[2025-11-04 10:23:11] - [36mverbose[39m: [POST /users/registration] -> 1 új felhasználó regisztrálva.
+[2025-11-04 10:23:11] - [36mverbose[39m: [POST//users/login] - 1 record(s) affected. | 2 ms
+[2025-11-04 10:23:11] - [36mverbose[39m: [POST /users/login] -> 1 rekord küldve válaszként
+[2025-11-04 10:30:55] - [36mverbose[39m: [POST//users/login] - 0 record(s) affected. | 1 ms
+[2025-11-04 10:31:14] - [36mverbose[39m: [POST//users/login] - 1 record(s) affected. | 1 ms
+[2025-11-04 10:31:14] - [36mverbose[39m: [POST /users/login] -> 1 rekord küldve válaszként
+[2025-11-04 10:31:49] - [36mverbose[39m: [POST//users/login] - 1 record(s) affected. | 1 ms
+[2025-11-04 10:31:49] - [36mverbose[39m: [POST /users/login] -> 1 rekord küldve válaszként
+[2025-11-04 10:32:26] - [36mverbose[39m: [POST//users/login] - 1 record(s) affected. | 1 ms
+[2025-11-04 10:32:26] - [36mverbose[39m: [POST /users/login] -> 1 rekord küldve válaszként
+[2025-11-04 10:32:45] - [36mverbose[39m: [POST//users/login] - 1 record(s) affected. | 1 ms
+[2025-11-04 10:32:45] - [36mverbose[39m: [POST /users/login] -> 1 rekord küldve válaszként
+[2025-11-04 10:33:12] - [36mverbose[39m: [POST//users/registration] - 0 record(s) affected. | 1 ms
+[2025-11-04 10:33:12] - [36mverbose[39m: [POST//users/registration] - 1 record(s) affected. | 4 ms
+[2025-11-04 10:33:12] - [36mverbose[39m: [POST /users/registration] -> 1 új felhasználó regisztrálva.
+[2025-11-04 10:33:12] - [36mverbose[39m: [POST//users/login] - 1 record(s) affected. | 2 ms
+[2025-11-04 10:33:12] - [36mverbose[39m: [POST /users/login] -> 1 rekord küldve válaszként
+[2025-11-04 10:35:32] - [36mverbose[39m: [POST//users/login] - 1 record(s) affected. | 1 ms
+[2025-11-04 10:35:32] - [36mverbose[39m: [POST /users/login] -> 1 rekord küldve válaszként
+[2025-11-04 10:56:23] - [36mverbose[39m: [GET//pizza] - 0 record(s) sent. | 1 ms
+[2025-11-04 10:56:23] - [36mverbose[39m: [GET /pizza] -> 0 rekord küldve válaszként
+[2025-11-04 10:56:23] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-04 10:56:30] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_pizzeria.pizzas' doesn't exist
+[2025-11-04 10:56:30] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-04 11:01:16] - [36mverbose[39m: [GET//pizza] - 0 record(s) sent. | 1 ms
+[2025-11-04 11:01:16] - [36mverbose[39m: [GET /pizza] -> 0 rekord küldve válaszként
+[2025-11-04 11:01:27] - [36mverbose[39m: [GET//pizza] - 0 record(s) sent. | 2 ms
+[2025-11-04 11:01:27] - [36mverbose[39m: [GET /pizza] -> 0 rekord küldve válaszként
+[2025-11-04 11:02:27] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 1 ms
+[2025-11-04 11:02:27] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:04:35] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 1 ms
+[2025-11-04 11:04:35] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:05:11] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 2 ms
+[2025-11-04 11:05:11] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:05:22] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 1 ms
+[2025-11-04 11:05:22] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:06:05] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 2 ms
+[2025-11-04 11:06:05] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:06:12] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 2 ms
+[2025-11-04 11:06:12] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:06:27] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 2 ms
+[2025-11-04 11:06:27] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:06:47] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 2 ms
+[2025-11-04 11:06:47] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:06:54] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 1 ms
+[2025-11-04 11:06:54] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:07:00] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 2 ms
+[2025-11-04 11:07:00] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:07:46] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 1 ms
+[2025-11-04 11:07:46] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:08:51] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 1 ms
+[2025-11-04 11:08:51] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:09:35] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 2 ms
+[2025-11-04 11:09:35] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:10:29] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 2 ms
+[2025-11-04 11:10:29] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:10:41] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 0 ms
+[2025-11-04 11:10:41] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:11:27] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 2 ms
+[2025-11-04 11:11:27] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:11:45] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 1 ms
+[2025-11-04 11:11:45] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:11:56] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 1 ms
+[2025-11-04 11:11:56] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:12:39] - [36mverbose[39m: [GET//pizza] - 1 record(s) sent. | 2 ms
+[2025-11-04 11:12:39] - [36mverbose[39m: [GET /pizza] -> 1 rekord küldve válaszként
+[2025-11-04 11:13:19] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:13:19] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:13:43] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:13:43] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:14:18] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 0 ms
+[2025-11-04 11:14:18] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:14:21] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:14:21] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:14:26] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:14:26] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:14:28] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:14:28] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:14:31] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:14:31] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:14:35] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:14:35] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:14:39] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:14:39] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:14:41] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:14:41] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:14:44] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:14:44] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:14:50] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:14:50] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:14:52] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:14:52] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:15:04] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:15:04] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:15:28] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:15:28] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:16:51] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:16:51] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:16:52] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:16:52] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:16:53] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:16:53] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:17:04] - [36mverbose[39m: [POST//users/login] - 1 record(s) affected. | 0 ms
+[2025-11-04 11:17:04] - [36mverbose[39m: [POST /users/login] -> 1 rekord küldve válaszként
+[2025-11-04 11:17:41] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:17:41] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:17:42] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:17:42] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:20:28] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:20:28] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:30:04] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:30:04] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:30:06] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:30:06] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:30:07] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 2 ms
+[2025-11-04 11:30:07] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:30:30] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:30:30] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:30:31] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:30:31] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:34:08] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:34:08] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:47:51] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:47:51] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:48:53] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:48:53] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 11:58:35] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 11:58:35] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:01:22] - [36mverbose[39m: [POST//pizza] - 1 record(s) affected. | 3 ms
+[2025-11-04 12:01:22] - [36mverbose[39m: [POST /pizza] -> 1 rekord feltöltésre került.
+[2025-11-04 12:01:23] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-04 12:01:23] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-04 12:01:50] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-04 12:01:50] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-04 12:01:58] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-04 12:01:58] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-04 12:02:02] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-04 12:02:02] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-04 12:02:05] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-04 12:02:05] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-04 12:02:07] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-04 12:02:07] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-04 12:03:52] - [36mverbose[39m: [POST//pizza] - 1 record(s) affected. | 4 ms
+[2025-11-04 12:03:52] - [36mverbose[39m: [POST /pizza] -> 1 rekord feltöltésre került.
+[2025-11-04 12:03:53] - [36mverbose[39m: [GET//pizza] - 4 record(s) sent. | 1 ms
+[2025-11-04 12:03:53] - [36mverbose[39m: [GET /pizza] -> 4 rekord küldve válaszként
+[2025-11-04 12:04:11] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-04 12:04:11] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-04 12:04:23] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-04 12:04:23] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-04 12:04:30] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 0 ms
+[2025-11-04 12:04:30] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:05:44] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 2 ms
+[2025-11-04 12:05:44] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:09:20] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:09:20] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:12:35] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-04 12:12:42] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-04 12:12:54] - [36mverbose[39m: [PATCH//users/4] - 1 record(s) affected. | 4 ms
+[2025-11-04 12:12:54] - [36mverbose[39m: [PATCH /users/4] -> 1 rekord frissítve.
+[2025-11-04 12:14:43] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:14:43] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:14:44] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:14:44] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:14:55] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:14:55] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:15:32] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:15:32] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:16:41] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 0 ms
+[2025-11-04 12:16:41] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:19:19] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:19:19] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:19:40] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:19:40] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:25:32] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:25:32] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:25:48] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:25:48] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:25:53] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:25:53] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:25:54] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:25:54] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:28:49] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:28:49] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:29:00] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:29:00] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:30:47] - [36mverbose[39m: [GET//pizza] - 2 record(s) sent. | 1 ms
+[2025-11-04 12:30:47] - [36mverbose[39m: [GET /pizza] -> 2 rekord küldve válaszként
+[2025-11-04 12:31:32] - [36mverbose[39m: [POST//pizza] - 1 record(s) affected. | 3 ms
+[2025-11-04 12:31:32] - [36mverbose[39m: [POST /pizza] -> 1 rekord feltöltésre került.
+[2025-11-04 12:31:33] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-04 12:31:33] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-04 12:32:33] - [36mverbose[39m: [PATCH//users/4] - 1 record(s) affected. | 4 ms
+[2025-11-04 12:32:33] - [36mverbose[39m: [PATCH /users/4] -> 1 rekord frissítve.
+[2025-11-04 12:32:47] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-04 12:32:47] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-04 12:54:12] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-04 12:54:12] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-04 12:55:05] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-04 12:55:05] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-04 12:55:16] - [36mverbose[39m: [POST//users/login] - 1 record(s) affected. | 1 ms
+[2025-11-04 12:55:16] - [36mverbose[39m: [POST /users/login] -> 1 rekord küldve válaszként
+[2025-11-04 12:58:59] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-04 12:58:59] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként

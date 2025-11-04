@@ -1,0 +1,36 @@
+<!-- Navbar -->
+<div class="bg-red-800/90 shadow-md items-center">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <!-- Logo -->
+    <div class="text-2xl font-bold text-red-300">{{ title }}</div>
+    <!-- Navigation Links -->
+    <div class="space-x-6 flex">
+      <div
+        *ngFor="let item of navbarItems"
+        routerLink="{{ item.link }}"
+        class="inline-block text-slate-100 hover:text-red-600 cursor-pointer"
+      >
+        {{ item.name }}
+      </div>
+
+      <div *ngIf="isUserLoggedIn" class="flex gap-4">
+        <div
+          (click)="kijelentkezes()"
+          class="inline-block text-slate-100 hover:text-red-600 cursor-pointer"
+        >
+          Kijelentkezés
+        </div>
+        <a
+          href="/kosar"
+          class="inline-block text-slate-100 hover:text-red-600 cursor-pointer -mt-1.5"
+        >
+          <img
+            src="https://images.vexels.com/media/users/3/200098/isolated/preview/7ad7c76da9a0cd7d2b01b64b2590617b-shopping-cart-icon-shopping-cart-icon.png"
+            alt="Bevásárlo kocsika"
+            class="w-10 h-10 cursor-pointer bg-white rounded-full p-1 hover:bg-gray-200"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
