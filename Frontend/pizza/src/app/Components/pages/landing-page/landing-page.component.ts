@@ -12,12 +12,10 @@ declare var window: any;
   styleUrl: './landing-page.component.scss',
 })
 export class LandingPageComponent implements OnInit, AfterViewInit {
-  ngOnInit(): void {
-    // Component initialization
-  }
+  ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    // Reinitialize Flowbite components after view is rendered
+    // FlowBite miatt :(
     if (window.initFlowbite) {
       setTimeout(() => {
         window.initFlowbite();

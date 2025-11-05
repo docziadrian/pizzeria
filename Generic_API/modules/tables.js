@@ -125,11 +125,9 @@ router.post("/:table/registration", (req, res) => {
       if (err) return res.status(500).json({ error: err.message });
 
       if (results.length != 0)
-        return res
-          .status(400)
-          .json({
-            error: "HIBA! Az általd választott e-mail cím már foglalt!",
-          });
+        return res.status(400).json({
+          error: "HIBA! Az általd választott e-mail cím már foglalt!",
+        });
 
       query(
         `INSERT INTO ${table} (name, email, password, role) VALUES (?,?,?, 'user')`,
@@ -156,6 +154,7 @@ router.post("/:table/registration", (req, res) => {
 router.post("/:table", (req, res) => {
   const table = req.params.table;
   const fields = Object.keys(req.body).join(",");
+  console.log(req.body);
   const values = '"' + Object.values(req.body).join('", "') + '"';
   query(
     `INSERT INTO ${table} (${fields}) VALUES (${values})`,

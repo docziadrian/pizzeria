@@ -19,7 +19,7 @@ export class ProfileOverviewComponent implements OnInit {
   isEditing = false;
   isChangingPassword = false;
 
-  // Szerkesztési adatok
+  // ha szerkeszt, ezeket módosítja
   editData = {
     name: '',
     email: '',
@@ -49,7 +49,6 @@ export class ProfileOverviewComponent implements OnInit {
     this.loadUserData();
   }
 
-  // Felhasználói adatok betöltése
   loadUserData(): void {
     if (this.user) {
       this.editData = {
@@ -59,13 +58,13 @@ export class ProfileOverviewComponent implements OnInit {
     }
   }
 
-  // Szerkesztés mód bekapcsolása
+  // Szerkesztés mód be
   startEditing(): void {
     this.isEditing = true;
     this.loadUserData();
   }
 
-  // Szerkesztés mód kikapcsolása
+  // Szerkesztés mód ki
   cancelEditing(): void {
     this.isEditing = false;
     this.loadUserData();
@@ -100,6 +99,7 @@ export class ProfileOverviewComponent implements OnInit {
 
       if (response.status === 200) {
         // Frissítjük a session-t
+        //TODO: updateSession -> backend -> új token
         const updatedUser = {
           ...this.user,
           name: this.editData.name,
@@ -191,7 +191,7 @@ export class ProfileOverviewComponent implements OnInit {
     }
   }
 
-  // Fiók törlése
+  //! Fiók törlése
   async deleteAccount(): Promise<void> {
     if (!this.user) return;
 

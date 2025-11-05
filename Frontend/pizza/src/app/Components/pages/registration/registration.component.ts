@@ -35,13 +35,12 @@ export class RegistrationComponent {
   }
 
   async registrationHandler() {
-    // Validate ÁSZF acceptance
+    // Hiba üzenetek miatt - ha nem fogadj el ASZFT
     if (!this.aszfElfogadva) {
       this.notificationService.error('El kell fogadnod az ÁSZF-et!');
       return;
     }
 
-    // Validate all fields are filled
     if (
       !this.registeringUser.name ||
       !this.registeringUser.email ||
@@ -52,14 +51,12 @@ export class RegistrationComponent {
       return;
     }
 
-    // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(this.registeringUser.email)) {
       this.notificationService.error('Hibás e-mail cím formátum!');
       return;
     }
 
-    // Validate password match
     if (
       this.registeringUser.password !== this.registeringUser.confirmPassword
     ) {
@@ -67,7 +64,6 @@ export class RegistrationComponent {
       return;
     }
 
-    // Validate password strength (at least 8 characters, 1 uppercase, 1 lowercase, 1 number)
     const passwdRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
     if (!passwdRegExp.test(this.registeringUser.password)) {
       this.notificationService.error(
@@ -77,7 +73,6 @@ export class RegistrationComponent {
     }
 
     try {
-      // Call registration endpoint
       const response = await this.authService.register(
         this.registeringUser.name,
         this.registeringUser.email,
@@ -85,10 +80,8 @@ export class RegistrationComponent {
         this.registeringUser.confirmPassword
       );
 
-      // Registration successful
       this.notificationService.success('Sikeres regisztráció!');
-
-      // Automatically log in the user
+      // Próbálja meg automatikusan bejelentkezni
       try {
         const loginResponse = await this.authService.login(
           this.registeringUser.email,
@@ -96,11 +89,9 @@ export class RegistrationComponent {
         );
 
         if (loginResponse.data && loginResponse.data.length > 0) {
-          // Store user session
           this.sessionService.setUser(loginResponse.data[0]);
           this.notificationService.success('Sikeres bejelentkezés!');
 
-          // Redirect to landing page and reload
           setTimeout(() => {
             this.router.navigate(['/']).then(() => {
               window.location.reload();
@@ -114,7 +105,7 @@ export class RegistrationComponent {
         this.router.navigate(['/bejelentkezes']);
       }
     } catch (error: any) {
-      // Handle backend errors
+      // Hiba üzenetek miatt
       const errorMessage =
         error.response?.data?.error || 'Hiba történt a regisztráció során!';
       this.notificationService.error(errorMessage);

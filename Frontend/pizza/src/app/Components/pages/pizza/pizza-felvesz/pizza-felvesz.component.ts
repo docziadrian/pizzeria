@@ -14,7 +14,7 @@ import { Pizza } from '../../../../Interfaces/Pizza';
   styleUrl: './pizza-felvesz.component.scss',
 })
 export class PizzaFelveszComponent {
-  // Új pizza objektum
+  // Új pizza
   newPizza = {
     nev: '',
     ar: 0,
@@ -76,7 +76,7 @@ export class PizzaFelveszComponent {
       formData.append('image', this.selectedFile);
 
       // Feltöltés ImgBB re
-      const imgbbApiKey = '1167681f3465f44a5054da3cb1406b22';
+      const imgbbApiKey = '1167681f3465f44a5054da3cb1406b22'; //! ne hagyjam benne
       const response = await fetch(
         `https://api.imgbb.com/1/upload?key=${imgbbApiKey}`,
         {

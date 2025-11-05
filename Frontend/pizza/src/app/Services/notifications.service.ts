@@ -17,8 +17,7 @@ export class NotificationsService {
 
   show(severity: Message['severity'], title: string, msg: string) {
     this.messageSubject.next({ severity, title, msg });
-    // Ha egy új üzenet jön, felülírjuk a régit és újraindítjuk az időzítőt
-
+    // TODO: Ha egy új üzenet jön, felülírjuk a régit és újraindítjuk az időzítőt -> javítani
     setTimeout(() => {
       this.hide();
     }, this.autoHideMs);

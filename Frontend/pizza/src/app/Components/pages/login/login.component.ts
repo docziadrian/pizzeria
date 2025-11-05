@@ -28,13 +28,11 @@ export class LoginComponent {
   ) {}
 
   async loginHandler() {
-    // Validate all fields are filled
     if (!this.loginUser.email || !this.loginUser.password) {
       this.notificationService.error('Nem adtál meg minden adatot!');
       return;
     }
 
-    // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(this.loginUser.email)) {
       this.notificationService.error('Hibás e-mail cím formátum!');
@@ -42,18 +40,16 @@ export class LoginComponent {
     }
 
     try {
-      // Call login endpoint
       const response = await this.authService.login(
         this.loginUser.email,
         this.loginUser.password
       );
 
       if (response.data && response.data.length > 0) {
-        // Store user session
         this.sessionService.setUser(response.data[0]);
+        //alert("")
         this.notificationService.success('Sikeres bejelentkezés!');
 
-        // Redirect to landing page and reload
         setTimeout(() => {
           this.router.navigate(['/']).then(() => {
             window.location.reload();
@@ -63,7 +59,6 @@ export class LoginComponent {
         this.notificationService.error('Hibás belépési adatok!');
       }
     } catch (error: any) {
-      // Handle backend errors
       const errorMessage =
         error.response?.data?.error || 'Hiba történt a bejelentkezés során!';
       this.notificationService.error(errorMessage);

@@ -4,6 +4,7 @@ import { ApiService } from '../../../../Services/api.service';
 import { ApiResponse } from '../../../../Interfaces/ApiResponse';
 import { Pizza } from '../../../../Interfaces/Pizza';
 import { CommonModule } from '@angular/common';
+import { LocalstorageService } from '../../../../Services/localstorage.service';
 
 @Component({
   selector: 'app-pizza-megjelenit',
@@ -13,7 +14,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './pizza-megjelenit.component.scss',
 })
 export class PizzaMegjelenitComponent implements OnInit {
-  constructor(private apiService: ApiService) {}
+  constructor(
+    private apiService: ApiService,
+    private localStorageService: LocalstorageService
+  ) {}
 
   allPizza: Pizza[] = [];
 
@@ -34,5 +38,16 @@ export class PizzaMegjelenitComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllPizzas();
+  }
+
+  vasarolPizza(pizza: Pizza) {
+    const pizzaToAdd = {
+      id: pizza.id,
+      name: pizza.nev,
+      price: pizza.ar,
+      amount: 1,
+      imgUrl: pizza.kepURL,
+    };
+    this.localStorageService.addItem(pizzaToAdd);
   }
 }

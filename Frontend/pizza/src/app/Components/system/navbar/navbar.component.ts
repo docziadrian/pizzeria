@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SessionService } from '../../../Services/session.service';
+import { LocalstorageService } from '../../../Services/localstorage.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,7 +12,10 @@ import { SessionService } from '../../../Services/session.service';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent implements OnInit {
-  constructor(private sessionService: SessionService) {}
+  constructor(
+    private sessionService: SessionService,
+    private localStorageService: LocalstorageService
+  ) {}
   @Input() title = '';
 
   NoUserNavItems = [
@@ -36,9 +40,20 @@ export class NavbarComponent implements OnInit {
     { name: 'Profil', link: '/fiokom' },
   ];
 
+  cartAmount: number = 0;
+
   ngOnInit(): void {
     const user = this.sessionService.getUser();
     let navItems = [];
+
+    //TODO: Feliratkozás a localstorage service-re, hogy frissüljön a kosár mennyiség
+    this.localStorageService.pizzas$.subscribe((items) => {
+      const totalAmount = items.reduce(
+        (sum: number, item: any) => sum + Number(item.amount),
+        0
+      );
+      this.cartAmount = totalAmount;
+    });
 
     if (user) {
       this.isUserLoggedIn = true;
@@ -53,6 +68,10 @@ export class NavbarComponent implements OnInit {
       // NINCS BELÉPVE A USER
       navItems = [...this.NoUserNavItems];
     }
+
+    // Kosár amount
+    const cartAmount = this.localStorageService.updateCartInNavbar();
+    this.cartAmount = cartAmount;
 
     this.navbarItems = navItems;
   }

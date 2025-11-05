@@ -4,10 +4,10 @@ import { User } from '../Interfaces/User';
 
 @Injectable({ providedIn: 'root' })
 export class SessionService {
-  private readonly cookieName = 'mm_user';
-  private readonly cookieMaxAgeDays = 7;
+  private readonly cookieName = 'mm_user'; // Cookie név, readonly attr.
+  private readonly cookieMaxAgeDays = 7; // 7 napig érvényes
 
-  private userSubject = new BehaviorSubject<User | null>(
+  private userSubject = new BehaviorSubject<User | null>( // Inicializalas cooki al
     this.readUserFromCookie()
   );
   user$ = this.userSubject.asObservable();
@@ -20,14 +20,19 @@ export class SessionService {
     return this.getUser() !== null;
   }
 
+  public isAdmin(): boolean {
+    const user = this.getUser();
+    return user?.role.role === 'admin'; //! ROLE KULON ROLE TYPE MIATT - de használható: unknown as any
+  }
+
   setUser(user: any): void {
     const normalized = this.normalizeUser(user);
     this.setCookie(
       this.cookieName,
       JSON.stringify(normalized),
-      this.cookieMaxAgeDays
+      this.cookieMaxAgeDays // Max nap ig érvényes
     );
-    this.userSubject.next(normalized);
+    this.userSubject.next(normalized); //! Beállítja a cookie-t és frissíti a subject-et
   }
 
   clearUser(): void {
@@ -52,18 +57,19 @@ export class SessionService {
     const roleValue =
       typeof src?.role === 'string' ? src.role : src?.role?.role;
     const normalized: User = {
+      //ért. vagy üres
       id: src?.id || '',
       name: src?.name || '',
       email: src?.email || '',
       password: '',
-      role: { role: roleValue === 'admin' ? 'admin' : 'user' },
+      role: { role: roleValue === 'admin' ? 'admin' : 'user' }, // ROLE.ROLE
     };
     return normalized;
   }
 
   private setCookie(name: string, value: string, days: number) {
     const date = new Date();
-    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000); // napok ms-ben
     const expires = `expires=${date.toUTCString()}`;
     document.cookie = `${name}=${encodeURIComponent(
       value
@@ -71,18 +77,20 @@ export class SessionService {
   }
 
   private getCookie(name: string): string | null {
-    const nameEQ = name + '=';
+    const nameEQForTheCookie = name + '=';
     const ca = document.cookie.split(';');
     for (let i = 0; i < ca.length; i++) {
       let c = ca[i];
       while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-      if (c.indexOf(nameEQ) === 0)
-        return decodeURIComponent(c.substring(nameEQ.length, c.length));
+      if (c.indexOf(nameEQForTheCookie) === 0)
+        return decodeURIComponent(
+          c.substring(nameEQForTheCookie.length, c.length)
+        );
     }
     return null;
   }
 
   private deleteCookie(name: string) {
-    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; SameSite=Lax`;
+    document.cookie = `${name}=; expires=Thu, 01 Jan 1 00:00:00 UTC; path=/; SameSite=Lax`; // beállítjuk a lejárati dátumát egy múltbeli időpontra
   }
 }

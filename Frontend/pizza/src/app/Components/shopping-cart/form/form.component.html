@@ -1,0 +1,208 @@
+<div class="bg-white rounded-lg shadow-md p-6 mb-6">
+  <h2 class="text-2xl font-bold text-gray-800 mb-6">Szállítási adatok</h2>
+
+  <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+    <!-- Név -->
+    <div class="mb-4">
+      <label for="nev" class="block text-sm font-semibold text-gray-700 mb-2">
+        Név <span class="text-red-500">*</span>
+      </label>
+      <input
+        type="text"
+        id="nev"
+        formControlName="nev"
+        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+        [class.border-red-500]="isFieldInvalid('nev')"
+        placeholder="Teljes név"
+      />
+      <p *ngIf="hasError('nev', 'required')" class="text-red-500 text-sm mt-1">
+        A név megadása kötelező
+      </p>
+      <p *ngIf="hasError('nev', 'minlength')" class="text-red-500 text-sm mt-1">
+        A névnek legalább 3 karakter hosszúnak kell lennie
+      </p>
+    </div>
+
+    <!-- Irányítószám és Város -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+      <div>
+        <label
+          for="iranyitoszam"
+          class="block text-sm font-semibold text-gray-700 mb-2"
+        >
+          Irányítószám <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="text"
+          id="iranyitoszam"
+          formControlName="iranyitoszam"
+          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+          [class.border-red-500]="isFieldInvalid('iranyitoszam')"
+          placeholder="1234"
+          maxlength="4"
+        />
+        <p
+          *ngIf="hasError('iranyitoszam', 'required')"
+          class="text-red-500 text-sm mt-1"
+        >
+          Az irányítószám megadása kötelező
+        </p>
+        <p
+          *ngIf="hasError('iranyitoszam', 'pattern')"
+          class="text-red-500 text-sm mt-1"
+        >
+          4 számjegyű irányítószámot adj meg
+        </p>
+      </div>
+
+      <div>
+        <label
+          for="varos"
+          class="block text-sm font-semibold text-gray-700 mb-2"
+        >
+          Város <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="text"
+          id="varos"
+          formControlName="varos"
+          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+          [class.border-red-500]="isFieldInvalid('varos')"
+          placeholder="Budapest"
+        />
+        <p
+          *ngIf="hasError('varos', 'required')"
+          class="text-red-500 text-sm mt-1"
+        >
+          A város megadása kötelező
+        </p>
+        <p
+          *ngIf="hasError('varos', 'minlength')"
+          class="text-red-500 text-sm mt-1"
+        >
+          A városnévnek legalább 2 karakter hosszúnak kell lennie
+        </p>
+      </div>
+    </div>
+
+    <!-- Utca és Házszám -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+      <div class="md:col-span-2">
+        <label
+          for="utca"
+          class="block text-sm font-semibold text-gray-700 mb-2"
+        >
+          Utca <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="text"
+          id="utca"
+          formControlName="utca"
+          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+          [class.border-red-500]="isFieldInvalid('utca')"
+          placeholder="Fő utca"
+        />
+        <p
+          *ngIf="hasError('utca', 'required')"
+          class="text-red-500 text-sm mt-1"
+        >
+          Az utca megadása kötelező
+        </p>
+        <p
+          *ngIf="hasError('utca', 'minlength')"
+          class="text-red-500 text-sm mt-1"
+        >
+          Az utcának legalább 3 karakter hosszúnak kell lennie
+        </p>
+      </div>
+
+      <div>
+        <label
+          for="hazszam"
+          class="block text-sm font-semibold text-gray-700 mb-2"
+        >
+          Házszám <span class="text-red-500">*</span>
+        </label>
+        <input
+          type="text"
+          id="hazszam"
+          formControlName="hazszam"
+          class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+          [class.border-red-500]="isFieldInvalid('hazszam')"
+          placeholder="12"
+        />
+        <p
+          *ngIf="hasError('hazszam', 'required')"
+          class="text-red-500 text-sm mt-1"
+        >
+          A házszám megadása kötelező
+        </p>
+      </div>
+    </div>
+
+    <!-- Telefonszám -->
+    <div class="mb-4">
+      <label
+        for="telefonszam"
+        class="block text-sm font-semibold text-gray-700 mb-2"
+      >
+        Telefonszám <span class="text-red-500">*</span>
+      </label>
+      <input
+        type="tel"
+        id="telefonszam"
+        formControlName="telefonszam"
+        class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
+        [class.border-red-500]="isFieldInvalid('telefonszam')"
+        placeholder="+36301234567 vagy 06301234567"
+      />
+      <p
+        *ngIf="hasError('telefonszam', 'required')"
+        class="text-red-500 text-sm mt-1"
+      >
+        A telefonszám megadása kötelező
+      </p>
+      <p
+        *ngIf="hasError('telefonszam', 'pattern')"
+        class="text-red-500 text-sm mt-1"
+      >
+        Helytelen telefonszám formátum (pl: +36301234567)
+      </p>
+    </div>
+
+    <!-- Fizetési mód -->
+    <div class="mb-6">
+      <label class="block text-sm font-semibold text-gray-700 mb-3">
+        Fizetési mód <span class="text-red-500">*</span>
+      </label>
+      <div class="flex gap-4">
+        <label class="flex items-center cursor-pointer">
+          <input
+            type="radio"
+            formControlName="fizetesiMod"
+            value="keszpenz"
+            class="w-4 h-4 text-green-600 focus:ring-green-500 cursor-pointer"
+          />
+          <span class="ml-2 text-gray-700">Készpénz</span>
+        </label>
+        <label class="flex items-center cursor-pointer">
+          <input
+            type="radio"
+            formControlName="fizetesiMod"
+            value="kartya"
+            class="w-4 h-4 text-green-600 focus:ring-green-500 cursor-pointer"
+          />
+          <span class="ml-2 text-gray-700">Bankkártya</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Hiba üzenetek miatt -->
+    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-4">
+      <p class="text-sm text-blue-800">
+        <span class="font-semibold">Figyelem:</span> Novembertől Decemberig
+        ingyenes szállítást kínálunk minden rendeléshez!
+      </p>
+    </div>
+  </form>
+</div>

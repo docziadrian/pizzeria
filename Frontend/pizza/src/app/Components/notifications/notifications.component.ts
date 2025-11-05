@@ -26,6 +26,7 @@ export class NotificationsComponent implements OnInit {
 
       if (msg) {
         // Beállítjuk az időtartamot a service alapján és újraindítjuk az animációt
+        //TODO: ez még nem jó, mert ha jön egy új üzenet, akkor nem indul újra az animáció
         this.durationMs = this.notificationsService.autoHideMs;
         this.resetProgressAnimation();
       }

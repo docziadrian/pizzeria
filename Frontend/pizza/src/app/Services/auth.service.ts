@@ -26,13 +26,10 @@ export class AuthService {
 
   logout() {
     this.sessionService.clearUser();
-    // Assuming no specific logout endpoint exists in the backend
     return Promise.resolve();
   }
 
   me() {
-    // Assuming there's no dedicated "me" endpoint in the backend
-    // You might need to fetch user data from the session or a similar source
     return Promise.resolve(this.sessionService.getUser());
   }
 }

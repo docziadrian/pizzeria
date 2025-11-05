@@ -1,4 +1,4 @@
-type Role = {
+export type Role = {
   role: 'user' | 'admin';
 };
 
