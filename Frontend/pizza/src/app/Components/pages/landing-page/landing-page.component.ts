@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../system/header/header.component';
+import { SessionService } from '../../../Services/session.service';
 
 declare var window: any;
 
@@ -12,8 +13,6 @@ declare var window: any;
   styleUrl: './landing-page.component.scss',
 })
 export class LandingPageComponent implements OnInit, AfterViewInit {
-  ngOnInit(): void {}
-
   ngAfterViewInit(): void {
     // FlowBite miatt :(
     if (window.initFlowbite) {
@@ -22,4 +21,12 @@ export class LandingPageComponent implements OnInit, AfterViewInit {
       }, 100);
     }
   }
+  isUserAdmin = false;
+
+  constructor(sessionService: SessionService) {
+    const user = sessionService.getUser();
+    this.isUserAdmin = user?.role.role === 'admin';
+  }
+
+  ngOnInit(): void {}
 }

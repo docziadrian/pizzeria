@@ -6,6 +6,7 @@ import { SessionService } from '../../../Services/session.service';
 import { ApiService } from '../../../Services/api.service';
 import { NotificationsService } from '../../../Services/notifications.service';
 import { User } from '../../../Interfaces/User';
+import axios from 'axios'; // Add hozzá ezt
 
 @Component({
   selector: 'app-profile-overview',
@@ -169,14 +170,14 @@ export class ProfileOverviewComponent implements OnInit {
     }
 
     try {
-      const response = await this.apiService.patch<User>(
-        'http://localhost:3000/users',
-        this.user.id,
+      // Módosítsd ezt a részt:
+      const response = await axios.patch(
+        `http://localhost:3000/users/${this.user.id}/change-password`,
         {
-          oldPassword: this.passwordData.currentPassword,
-          password: this.passwordData.newPassword,
-          confirm: this.passwordData.confirmPassword,
-        }
+          currentPassword: this.passwordData.currentPassword,
+          newPassword: this.passwordData.newPassword,
+        },
+        { withCredentials: true }
       );
 
       if (response.status === 200) {

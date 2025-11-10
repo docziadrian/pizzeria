@@ -1,126 +1,343 @@
-<div class="container mx-auto px-4 py-8 max-w-4xl">
-  <h1 class="text-3xl font-bold mb-6 text-center text-gray-800">Kosár</h1>
-
-  <!-- Üres kosár üzenet -->
-  <div *ngIf="allPizzasInCart.length === 0" class="text-center py-12">
-    <svg
-      class="mx-auto h-24 w-24 text-gray-400 mb-4"
-      fill="none"
-      stroke="currentColor"
-      viewBox="0 0 24 24"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-      ></path>
-    </svg>
-    <p class="text-xl text-gray-600">A kosarad üres</p>
-    <p class="text-gray-500 mt-2">Adj hozzá pizzákat a rendeléshez!</p>
-  </div>
-
-  <!-- Kosár tartalom -->
-  <div *ngIf="allPizzasInCart.length > 0" class="space-y-4">
-    <div
-      *ngFor="let item of allPizzasInCart"
-      class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow duration-200"
-    >
-      <div class="flex items-center gap-4">
-        <!-- Kép -->
-        <img
-          [src]="item.imgUrl"
-          alt="{{ item.name }}"
-          class="w-24 h-24 object-cover rounded-lg shadow-sm"
-        />
-
-        <!-- Pizza információk -->
-        <div class="flex-1">
-          <h2 class="text-xl font-semibold text-gray-800 mb-1">
-            {{ item.name }}
-          </h2>
-          <p class="text-lg font-bold text-green-600">{{ item.price }} Ft</p>
-          <p class="text-sm text-gray-500">Egységár</p>
-        </div>
-
-        <!-- Mennyiség kezelés -->
-        <div class="flex items-center gap-3">
-          <button
-            (click)="decreaseQuantity(item.id)"
-            class="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors duration-200"
-            [disabled]="item.amount <= 1"
-            [class.opacity-50]="item.amount <= 1"
-          >
-            <span class="text-lg font-bold">−</span>
-          </button>
-          <span class="text-lg font-semibold min-w-[2rem] text-center">{{
-            item.amount
-          }}</span>
-          <button
-            (click)="increaseQuantity(item.id)"
-            class="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors duration-200"
-          >
-            <span class="text-lg font-bold">+</span>
-          </button>
-        </div>
-
-        <!-- Összár -->
-        <div class="text-right min-w-[100px]">
-          <p class="text-xl font-bold text-gray-800">
-            {{ item.price * item.amount }} Ft
-          </p>
-          <p class="text-sm text-gray-500">Összesen</p>
-        </div>
-
-        <!-- Törlés gomb -->
-        <button
-          (click)="deleteItem(item.id)"
-          class="ml-2 p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors duration-200"
-          title="Törlés"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-            ></path>
-          </svg>
-        </button>
-      </div>
+<div
+  class="min-h-screen bg-gradient-to-b from-gray-900 to-black py-12 px-4 -mt-2"
+>
+  <div class="container mx-auto max-w-6xl">
+    <!-- Fejléc -->
+    <div class="text-center mb-12">
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+        Kosár <span class="text-yellow-400">Áttekintés</span>
+      </h1>
+      <p class="text-xl text-gray-300">Ellenőrizd és finalizáld rendelésedet</p>
     </div>
 
-    <!-- Összegzés -->
-    <div class="bg-gray-50 rounded-lg p-6 mt-6">
-      <div class="flex justify-between items-center mb-4">
-        <span class="text-lg font-semibold text-gray-700">Pizzák száma:</span>
-        <span class="text-lg text-gray-800">{{ getTotalItems() }} db</span>
-      </div>
-      <div class="flex justify-between items-center mb-6">
-        <span class="text-2xl font-bold text-gray-800">Végösszeg:</span>
-        <span class="text-2xl font-bold text-green-600"
-          >{{ getTotalPrice() }} Ft</span
+    <!-- Üres kosár üzenet -->
+    <div *ngIf="allPizzasInCart.length === 0" class="text-center py-20">
+      <div
+        class="bg-gray-800/50 backdrop-blur-sm rounded-full p-12 mb-8 inline-block"
+      >
+        <svg
+          class="w-32 h-32 text-gray-600"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
         >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+          ></path>
+        </svg>
+      </div>
+      <h2 class="text-3xl font-bold text-white mb-4">A kosarad üres</h2>
+      <p class="text-xl text-gray-400 mb-8">
+        Adj hozzá pizzákat a rendeléshez!
+      </p>
+      <a
+        href="/pizzak"
+        class="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-full transition-all duration-300"
+      >
+        <svg
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 6v6m0 0v6m0-6h6m-6 0H6"
+          ></path>
+        </svg>
+        Pizzák böngészése
+      </a>
+    </div>
+
+    <!-- Kosár tartalom -->
+    <div *ngIf="allPizzasInCart.length > 0" class="grid lg:grid-cols-3 gap-8">
+      <!-- Kosár elemek -->
+      <div class="lg:col-span-2 space-y-4">
+        <div
+          *ngFor="let item of allPizzasInCart"
+          class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-gray-600 transition-all duration-300"
+        >
+          <div class="flex flex-col md:flex-row items-center gap-6">
+            <!-- Kép -->
+            <div
+              class="relative overflow-hidden rounded-xl w-full md:w-32 h-32 flex-shrink-0"
+            >
+              <img
+                [src]="item.imgUrl"
+                [alt]="item.name"
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"
+              ></div>
+            </div>
+
+            <!-- Pizza információk -->
+            <div class="flex-1 text-center md:text-left">
+              <h2 class="text-2xl font-bold text-white mb-2">
+                {{ item.name }}
+              </h2>
+              <div
+                class="flex items-center gap-2 justify-center md:justify-start"
+              >
+                <span class="text-2xl font-bold text-yellow-400">{{
+                  item.price | number
+                }}</span>
+                <span class="text-gray-400">Ft / db</span>
+              </div>
+            </div>
+
+            <!-- Mennyiség kezelés -->
+            <div class="flex flex-col items-center gap-4">
+              <div
+                class="flex items-center gap-3 bg-gray-900/50 rounded-full p-2"
+              >
+                <button
+                  (click)="decreaseQuantity(item.id)"
+                  class="w-10 h-10 rounded-full bg-gray-700 hover:bg-gray-600 flex items-center justify-center transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  [disabled]="item.amount <= 1"
+                >
+                  <svg
+                    class="w-5 h-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20 12H4"
+                    ></path>
+                  </svg>
+                </button>
+                <span
+                  class="text-2xl font-bold text-white min-w-[3rem] text-center"
+                  >{{ item.amount }}</span
+                >
+                <button
+                  (click)="increaseQuantity(item.id)"
+                  class="w-10 h-10 rounded-full bg-yellow-400 hover:bg-yellow-500 flex items-center justify-center transition-colors duration-200"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-900"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 4v16m8-8H4"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Összár -->
+              <div class="text-center bg-gray-900/50 rounded-xl px-4 py-2">
+                <p class="text-sm text-gray-400 mb-1">Összesen</p>
+                <p class="text-2xl font-bold text-yellow-400">
+                  {{ item.price * item.amount | number }} Ft
+                </p>
+              </div>
+            </div>
+
+            <!-- Törlés gomb -->
+            <button
+              (click)="deleteItem(item.id)"
+              class="p-3 text-red-400 hover:bg-red-900/30 rounded-xl transition-all duration-200 border border-red-900/50 hover:border-red-700"
+              title="Törlés"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
 
-      <div class="flex gap-3">
-        <button
-          (click)="clearCart()"
-          class="flex-1 hover:cursor-pointer bg-red-800 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
+      <!-- Összegzés oldalsó panel -->
+      <div class="lg:col-span-1">
+        <div
+          class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 sticky top-24"
         >
-          Kosár kiürítése
-        </button>
-        <button
-          (click)="submitOrder()"
-          class="flex-1 bg-green-900 hover:bg-green-600 hover:cursor-pointer text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200"
-        >
-          Rendelés leadása
-        </button>
+          <h3 class="text-2xl font-bold text-white mb-6">
+            Rendelés összegzése
+          </h3>
+
+          <!-- Részletek -->
+          <div class="space-y-4 mb-6">
+            <div
+              class="flex justify-between items-center pb-4 border-b border-gray-700"
+            >
+              <span class="text-gray-400">Pizzák száma:</span>
+              <span class="text-xl font-bold text-white"
+                >{{ getTotalItems() }} db</span
+              >
+            </div>
+
+            <div
+              class="flex justify-between items-center pb-4 border-b border-gray-700"
+            >
+              <span class="text-gray-400">Részösszeg:</span>
+              <span class="text-xl font-bold text-white"
+                >{{ getTotalPrice() | number }} Ft</span
+              >
+            </div>
+
+            <div
+              class="flex justify-between items-center pb-4 border-b border-gray-700"
+            >
+              <span class="text-gray-400">Szállítás:</span>
+              <span
+                [ngClass]="
+                  getTotalPrice() >= 10000
+                    ? 'bg-green-900/50 p-2'
+                    : 'bg-yellow-900 p-2'
+                "
+                class="text-lg text-white font-semibold"
+              >
+                {{ getTotalPrice() >= 10000 ? "Ingyenes" : "500 Ft" }}
+              </span>
+            </div>
+
+            <div class="flex justify-between items-center pt-4">
+              <span class="text-xl font-bold text-white">Végösszeg:</span>
+              <span class="text-3xl font-bold text-yellow-400">
+                {{
+                  getTotalPrice() >= 10000
+                    ? (getTotalPrice() | number)
+                    : (getTotalPrice() + 500 | number)
+                }}
+                Ft
+              </span>
+            </div>
+          </div>
+
+          <!-- Kupon kód (opcionális) -->
+          <div class="mb-6">
+            <label class="block text-sm font-semibold text-gray-400 mb-2"
+              >Kupon kód</label
+            >
+            <div class="flex gap-2">
+              <input
+                type="text"
+                placeholder="Adj meg kupon kódot"
+                class="flex-1 bg-gray-900/50 border border-gray-700 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+              />
+            </div>
+            <button
+              class="bg-gray-700 hover:bg-gray-600 text-white px-2 py-3 my-2 rounded-xl transition-colors duration-200 w-full font-semibold"
+            >
+              Alkalmaz
+            </button>
+          </div>
+
+          <!-- Gombok -->
+          <div class="space-y-3">
+            <button
+              (click)="submitOrder()"
+              class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              Rendelés leadása
+            </button>
+
+            <button
+              (click)="clearCart()"
+              class="w-full bg-red-900/50 hover:bg-red-900 text-red-100 border border-red-800 font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                ></path>
+              </svg>
+              Kosár kiürítése
+            </button>
+
+            <a
+              href="/pizzak"
+              class="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                ></path>
+              </svg>
+              Vásárlás folytatása
+            </a>
+          </div>
+
+          <!-- Szállítási info -->
+          <div
+            class="mt-6 p-4 bg-gray-900/50 rounded-xl border border-gray-700"
+          >
+            <div class="flex items-start gap-3">
+              <svg
+                class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <div class="text-sm">
+                <p class="text-gray-300 font-semibold mb-1">Tudtad?</p>
+                <p class="text-gray-400">
+                  10,000 Ft feletti rendelésnél a szállítás ingyenes!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,230 +1,320 @@
-<div class="w-full max-w-4xl mx-auto p-4">
-  <div
-    class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
-  >
+<div
+  class="min-h-screen bg-gradient-to-b from-gray-900 to-black py-12 px-4 -mt-2"
+>
+  <div class="max-w-4xl mx-auto">
     <!-- Fejléc -->
-    <div class="flex items-center justify-between mb-6">
-      <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
-        Profil Áttekintés
-      </h2>
-      <span
-        class="px-3 py-1 text-sm font-medium rounded-full"
-        [class.bg-red-100]="user?.role?.role === 'admin'"
-        [class.text-red-800]="user?.role?.role === 'admin'"
-        [class.bg-blue-100]="user?.role?.role === 'user'"
-        [class.text-blue-800]="user?.role?.role === 'user'"
-      >
-        {{ user?.role?.role === "admin" ? "Admin" : "Felhasználó" }}
-      </span>
+    <div class="text-center mb-12">
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+        Profil <span class="text-yellow-400">Áttekintés</span>
+      </h1>
+      <p class="text-xl text-gray-300">Kezeld fiókod adatait és beállításait</p>
     </div>
 
-    <!-- FORM -->
-    <div *ngIf="!isEditing && !isChangingPassword" class="space-y-6">
-      <!-- Név -->
-      <div>
-        <label
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >
-          Név
-        </label>
-        <p class="text-lg text-gray-700 dark:text-gray-300">{{ user?.name }}</p>
+    <!-- Fő kártya -->
+    <div
+      class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-2xl overflow-hidden"
+    >
+      <!-- Fejléc sáv -->
+      <div class="bg-white/80 p-6">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <div
+              class="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-8 h-8 text-yellow-400"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold text-gray-900">{{ user?.name }}</h2>
+              <p class="text-gray-800">{{ user?.email }}</p>
+            </div>
+          </div>
+          <span
+            class="px-4 py-2 text-sm font-bold rounded-full"
+            [class.bg-red-900]="user?.role?.role === 'admin'"
+            [class.text-red-100]="user?.role?.role === 'admin'"
+            [class.bg-gray-900]="user?.role?.role === 'user'"
+            [class.text-gray-100]="user?.role?.role === 'user'"
+          >
+            {{ user?.role?.role === "admin" ? "Admin" : "Felhasználó" }}
+          </span>
+        </div>
       </div>
 
-      <!-- Email -->
-      <div>
-        <label
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >
-          Email cím
-        </label>
-        <p class="text-lg text-gray-700 dark:text-gray-300">
-          {{ user?.email }}
-        </p>
-      </div>
+      <!-- Tartalom -->
+      <div class="p-8">
+        <!-- Profil megjelenítés -->
+        <div *ngIf="!isEditing && !isChangingPassword" class="space-y-8">
+          <!-- Információk -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Név -->
+            <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-700">
+              <label class="block text-sm font-semibold text-gray-400 mb-2">
+                Név
+              </label>
+              <p class="text-xl text-white font-medium">{{ user?.name }}</p>
+            </div>
 
-      <!-- User ID -->
-      <div>
-        <label
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >
-          Felhasználói azonosító
-        </label>
-        <p class="text-lg text-gray-700 dark:text-gray-300">{{ user?.id }}</p>
-      </div>
+            <!-- Email -->
+            <div class="bg-gray-900/50 rounded-xl p-6 border border-gray-700">
+              <label class="block text-sm font-semibold text-gray-400 mb-2">
+                Email cím
+              </label>
+              <p class="text-xl text-white font-medium">{{ user?.email }}</p>
+            </div>
 
-      <!-- Gombok -->
-      <div class="flex flex-wrap gap-4 pt-6">
-        <button
-          type="button"
-          (click)="startEditing()"
-          class="flex-1 min-w-[200px] text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Adatok szerkesztése
-        </button>
-        <button
-          type="button"
-          (click)="startChangingPassword()"
-          class="flex-1 min-w-[200px] text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800"
-        >
-          Jelszó változtatás
-        </button>
-        <button
-          type="button"
-          (click)="logout()"
-          class="flex-1 min-w-[200px] text-white bg-gray-700 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-        >
-          Kijelentkezés
-        </button>
-        <button
-          type="button"
-          (click)="deleteAccount()"
-          class="flex-1 min-w-[200px] text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
-        >
-          Fiók törlése
-        </button>
-      </div>
-    </div>
+            <!-- Felhasználói azonosító -->
+            <div
+              class="bg-gray-900/50 rounded-xl p-6 border border-gray-700 md:col-span-2"
+            >
+              <label class="block text-sm font-semibold text-gray-400 mb-2">
+                Felhasználói azonosító
+              </label>
+              <p class="text-xl text-white font-medium">#{{ user?.id }}</p>
+            </div>
+          </div>
 
-    <!-- Profil szerkesztése -->
-    <div *ngIf="isEditing" class="space-y-6">
-      <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-        Adatok szerkesztése
-      </h3>
+          <!-- Műveletek gombok -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-6">
+            <button
+              type="button"
+              (click)="startEditing()"
+              class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                ></path>
+              </svg>
+              Adatok szerkesztése
+            </button>
 
-      <!-- Név szerkesztése -->
-      <div>
-        <label
-          for="edit-name"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >
-          Név
-        </label>
-        <input
-          type="text"
-          id="edit-name"
-          name="name"
-          [(ngModel)]="editData.name"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-          required
-        />
-      </div>
+            <button
+              type="button"
+              (click)="startChangingPassword()"
+              class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
+                ></path>
+              </svg>
+              Jelszó változtatás
+            </button>
 
-      <!-- Email szerkesztése -->
-      <div>
-        <label
-          for="edit-email"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >
-          Email cím
-        </label>
-        <input
-          type="email"
-          id="edit-email"
-          name="email"
-          [(ngModel)]="editData.email"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-          required
-        />
-      </div>
+            <button
+              type="button"
+              (click)="logout()"
+              class="bg-gray-800/50 hover:bg-gray-800 text-white font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2 border border-gray-700"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                ></path>
+              </svg>
+              Kijelentkezés
+            </button>
 
-      <!-- Gombok -->
-      <div class="flex gap-4">
-        <button
-          type="button"
-          (click)="saveProfile()"
-          class="flex-1 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Mentés
-        </button>
-        <button
-          type="button"
-          (click)="cancelEditing()"
-          class="flex-1 text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
-        >
-          Mégse
-        </button>
-      </div>
-    </div>
+            <button
+              type="button"
+              (click)="deleteAccount()"
+              class="bg-red-900/50 hover:bg-red-900 text-red-100 font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2 border border-red-800"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                ></path>
+              </svg>
+              Fiók törlése
+            </button>
+          </div>
+        </div>
 
-    <!-- Jelszó változtatás -->
-    <div *ngIf="isChangingPassword" class="space-y-6">
-      <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-        Jelszó változtatás
-      </h3>
+        <!-- Profil szerkesztése -->
+        <div *ngIf="isEditing" class="space-y-6">
+          <h3 class="text-2xl font-bold text-white mb-6">
+            Adatok szerkesztése
+          </h3>
 
-      <!-- Jelenlegi jelszó -->
-      <div>
-        <label
-          for="current-password"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >
-          Jelenlegi jelszó
-        </label>
-        <input
-          type="password"
-          id="current-password"
-          name="currentPassword"
-          [(ngModel)]="passwordData.currentPassword"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-          required
-        />
-      </div>
+          <div class="space-y-4">
+            <!-- Név szerkesztése -->
+            <div>
+              <label
+                for="edit-name"
+                class="block mb-2 text-sm font-semibold text-gray-400"
+              >
+                Név
+              </label>
+              <input
+                type="text"
+                id="edit-name"
+                name="name"
+                [(ngModel)]="editData.name"
+                class="bg-gray-900/50 border border-gray-700 text-white text-lg rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent block w-full p-4"
+                required
+              />
+            </div>
 
-      <!-- Új jelszó -->
-      <div>
-        <label
-          for="new-password"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >
-          Új jelszó
-        </label>
-        <input
-          type="password"
-          id="new-password"
-          name="newPassword"
-          [(ngModel)]="passwordData.newPassword"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-          required
-        />
-        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
-          Legalább 8 karakter, 1 nagybetű, 1 kisbetű és 1 szám
-        </p>
-      </div>
+            <!-- Email szerkesztése -->
+            <div>
+              <label
+                for="edit-email"
+                class="block mb-2 text-sm font-semibold text-gray-400"
+              >
+                Email cím
+              </label>
+              <input
+                type="email"
+                id="edit-email"
+                name="email"
+                [(ngModel)]="editData.email"
+                class="bg-gray-900/50 border border-gray-700 text-white text-lg rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent block w-full p-4"
+                required
+              />
+            </div>
+          </div>
 
-      <!-- Új jelszó megerősítése -->
-      <div>
-        <label
-          for="confirm-password"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-        >
-          Új jelszó megerősítése
-        </label>
-        <input
-          type="password"
-          id="confirm-password"
-          name="confirmPassword"
-          [(ngModel)]="passwordData.confirmPassword"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-          required
-        />
-      </div>
+          <!-- Gombok -->
+          <div class="flex gap-4 pt-6">
+            <button
+              type="button"
+              (click)="saveProfile()"
+              class="flex-1 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-6 rounded-full transition-all duration-300"
+            >
+              Mentés
+            </button>
+            <button
+              type="button"
+              (click)="cancelEditing()"
+              class="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 px-6 rounded-full transition-all duration-300"
+            >
+              Mégse
+            </button>
+          </div>
+        </div>
 
-      <!-- Gombok -->
-      <div class="flex gap-4">
-        <button
-          type="button"
-          (click)="changePassword()"
-          class="flex-1 text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800"
-        >
-          Jelszó mentése
-        </button>
-        <button
-          type="button"
-          (click)="cancelChangingPassword()"
-          class="flex-1 text-gray-900 bg-white border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
-        >
-          Mégse
-        </button>
+        <!-- Jelszó változtatás -->
+        <div *ngIf="isChangingPassword" class="space-y-6">
+          <h3 class="text-2xl font-bold text-white mb-6">Jelszó változtatás</h3>
+
+          <div class="space-y-4">
+            <!-- Jelenlegi jelszó -->
+            <div>
+              <label
+                for="current-password"
+                class="block mb-2 text-sm font-semibold text-gray-400"
+              >
+                Jelenlegi jelszó
+              </label>
+              <input
+                type="password"
+                id="current-password"
+                name="currentPassword"
+                [(ngModel)]="passwordData.currentPassword"
+                class="bg-gray-900/50 border border-gray-700 text-white text-lg rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent block w-full p-4"
+                required
+              />
+            </div>
+
+            <!-- Új jelszó -->
+            <div>
+              <label
+                for="new-password"
+                class="block mb-2 text-sm font-semibold text-gray-400"
+              >
+                Új jelszó
+              </label>
+              <input
+                type="password"
+                id="new-password"
+                name="newPassword"
+                [(ngModel)]="passwordData.newPassword"
+                class="bg-gray-900/50 border border-gray-700 text-white text-lg rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent block w-full p-4"
+                required
+              />
+              <p class="mt-2 text-sm text-gray-500">
+                Legalább 8 karakter, 1 nagybetű, 1 kisbetű és 1 szám
+              </p>
+            </div>
+
+            <!-- Új jelszó megerősítése -->
+            <div>
+              <label
+                for="confirm-password"
+                class="block mb-2 text-sm font-semibold text-gray-400"
+              >
+                Új jelszó megerősítése
+              </label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirmPassword"
+                [(ngModel)]="passwordData.confirmPassword"
+                class="bg-gray-900/50 border border-gray-700 text-white text-lg rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent block w-full p-4"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Gombok -->
+          <div class="flex gap-4 pt-6">
+            <button
+              type="button"
+              (click)="changePassword()"
+              class="flex-1 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-6 rounded-full transition-all duration-300"
+            >
+              Jelszó mentése
+            </button>
+            <button
+              type="button"
+              (click)="cancelChangingPassword()"
+              class="flex-1 bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 px-6 rounded-full transition-all duration-300"
+            >
+              Mégse
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

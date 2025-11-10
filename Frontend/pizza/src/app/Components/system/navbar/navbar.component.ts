@@ -4,6 +4,12 @@ import { RouterLink } from '@angular/router';
 import { SessionService } from '../../../Services/session.service';
 import { LocalstorageService } from '../../../Services/localstorage.service';
 
+interface InfoItem {
+  icon: string;
+  title: string;
+  description: string;
+  link: string;
+}
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -17,6 +23,12 @@ export class NavbarComponent implements OnInit {
     private localStorageService: LocalstorageService
   ) {}
   @Input() title = '';
+
+  isHelpOpen = false;
+
+  changeHelpOpen() {
+    this.isHelpOpen = !this.isHelpOpen;
+  }
 
   NoUserNavItems = [
     { name: 'Főoldal', link: '/' },
@@ -80,4 +92,38 @@ export class NavbarComponent implements OnInit {
     this.sessionService.clearUser();
     window.location.reload();
   }
+
+  asideItems = [
+    { name: 'Főoldal', link: '/' },
+    { name: 'Pizzák', link: '/pizzak' },
+    { name: 'Kosár', link: '/kosar' },
+    { name: 'Profil', link: '/profil' },
+  ];
+
+  infoItems: InfoItem[] = [
+    {
+      icon: 'truck',
+      title: 'Ingyenes a szállítás',
+      description: '10 000 Ft felett',
+      link: '/szallitas',
+    },
+    {
+      icon: 'shield',
+      title: 'Szállítási garancia',
+      description: 'Mindig megérkezik rendben',
+      link: '/szallitas',
+    },
+    {
+      icon: 'help',
+      title: 'Segítség kérése',
+      description: 'Kérdésed van? Keress minket',
+      link: '/kapcsolat',
+    },
+    {
+      icon: 'smartphone',
+      title: 'Vásárlás mobilon',
+      description: 'Töltsd le az appot',
+      link: '/app',
+    },
+  ];
 }

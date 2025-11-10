@@ -1,79 +1,102 @@
-<!-- Carousel component from FlowBite -->
 <div id="indicators-carousel" class="relative w-full" data-carousel="static">
-  <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-    <!-- Item 1 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-      <img
-        src="https://foodmonsterbaja.hu/img/ws/d015fe75b4aa4639826128bccd378c4f.jpg"
-        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt="..."
-      />
-    </div>
-    <!-- Item 2 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROqnKU2jJvTjukVjfTArO-kIqN3kGdV7PfUFuYHfX9CA&s=10"
-        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt="..."
-      />
-    </div>
-    <!-- Item 3 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqEBZgP_5I4Okxu0-X-aaoQKkaft6ajHOuCP7qeVfIjM8lQuZTG9aD-pWA&s=10"
-        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt="..."
-      />
-    </div>
-    <!-- Item 4 -->
-    <div class="hidden duration-700 ease-in-out" data-carousel-item>
-      <img
-        src="https://drive.hu/site/assets/files/47138/magyar-pizzeria-europa-legjobbjai-rangsor.jpg"
-        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-        alt="..."
-      />
-    </div>
-  </div>
-  <!-- Slider indicators -->
   <div
-    class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2"
+    class="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden rounded-2xl shadow-2xl"
   >
+    <!-- Pizza slides -->
+    <div
+      *ngFor="let pizza of allPizza; let i = index"
+      class="hidden duration-700 ease-in-out"
+      [attr.data-carousel-item]="i === 0 ? 'active' : ''"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent"
+      ></div>
+
+      <!-- Pizza kép -->
+      <img
+        [src]="pizza.kepURL"
+        class="absolute block w-full h-full object-cover object-center"
+        [alt]="pizza.nev"
+      />
+
+      <!-- Pizza információk - bal oldalon -->
+      <div class="absolute inset-0 flex items-center">
+        <div class="max-w-7xl mx-auto px-8 md:px-16 lg:px-24 w-full">
+          <div class="max-w-xl space-y-6">
+            <!-- Pizza neve -->
+            <h2
+              class="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl animate-fade-in-right"
+            >
+              {{ pizza.nev }}
+            </h2>
+
+            <!-- Hozzávalók -->
+            <div class="space-y-3 animate-fade-in-right animation-delay-100">
+              <p class="text-lg md:text-xl text-gray-200 font-semibold">
+                Hozzávalók:
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  *ngFor="let ingredient of pizza.hozzavalok"
+                  class="px-4 py-2 bg-white/20 backdrop-blur-md text-white rounded-full text-sm font-medium border border-white/30"
+                >
+                  {{ ingredient }}
+                </span>
+              </div>
+            </div>
+
+            <!-- Ár -->
+            <div
+              class="flex items-center gap-4 animate-fade-in-right animation-delay-200"
+            >
+              <span
+                class="text-5xl font-bold text-yellow-400 drop-shadow-lg bg-slate-600/40 p-2"
+              >
+                {{ pizza.ar }} Ft
+              </span>
+            </div>
+
+            <!-- Rendelés gomb -->
+            <div class="animate-fade-in-right animation-delay-300">
+              <button
+                class="group px-8 py-4 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold text-lg rounded-full shadow-xl transition-all duration-300 flex items-center gap-3"
+              >
+                <span>Rendelés</span>
+                <svg
+                  class="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 7l5 5m0 0l-5 5m5-5H6"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider indicators -->
+  <div class="absolute z-30 flex -translate-x-1/2 space-x-3 bottom-8 left-1/2">
     <button
+      *ngFor="let pizza of allPizza; let i = index"
       type="button"
-      class="w-3 h-3 rounded-full"
-      aria-current="true"
-      aria-label="Slide 1"
-      data-carousel-slide-to="0"
-    ></button>
-    <button
-      type="button"
-      class="w-3 h-3 rounded-full"
-      aria-current="false"
-      aria-label="Slide 2"
-      data-carousel-slide-to="1"
-    ></button>
-    <button
-      type="button"
-      class="w-3 h-3 rounded-full"
-      aria-current="false"
-      aria-label="Slide 3"
-      data-carousel-slide-to="2"
-    ></button>
-    <button
-      type="button"
-      class="w-3 h-3 rounded-full"
-      aria-current="false"
-      aria-label="Slide 4"
-      data-carousel-slide-to="3"
-    ></button>
-    <button
-      type="button"
-      class="w-3 h-3 rounded-full"
-      aria-current="false"
-      aria-label="Slide 5"
-      data-carousel-slide-to="4"
+      class="w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all duration-300"
+      [class.w-8]="i === 0"
+      [class.bg-white]="i === 0"
+      [attr.aria-current]="i === 0"
+      [attr.aria-label]="'Slide ' + (i + 1)"
+      [attr.data-carousel-slide-to]="i"
     ></button>
   </div>
+
   <!-- Slider controls -->
   <button
     type="button"
@@ -81,50 +104,47 @@
     data-carousel-prev
   >
     <span
-      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-md group-hover:bg-white/30 transition-all duration-300 border border-white/30"
     >
       <svg
-        class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6 text-white"
         fill="none"
-        viewBox="0 0 6 10"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
       >
         <path
-          stroke="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="2"
-          d="M5 1 1 5l4 4"
+          d="M15 19l-7-7 7-7"
         />
       </svg>
-      <span class="sr-only">Previous</span>
+      <span class="sr-only">Előző</span>
     </span>
   </button>
+
   <button
     type="button"
     class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
     data-carousel-next
   >
     <span
-      class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+      class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 backdrop-blur-md group-hover:bg-white/30 transition-all duration-300 border border-white/30"
     >
       <svg
-        class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
+        class="w-6 h-6 text-white"
         fill="none"
-        viewBox="0 0 6 10"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
       >
         <path
-          stroke="currentColor"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="2"
-          d="m1 9 4-4-4-4"
+          d="M9 5l7 7-7 7"
         />
       </svg>
-      <span class="sr-only">Next</span>
+      <span class="sr-only">Következő</span>
     </span>
   </button>
 </div>

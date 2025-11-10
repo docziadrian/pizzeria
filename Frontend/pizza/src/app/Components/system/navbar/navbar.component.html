@@ -1,38 +1,254 @@
-<div class="bg-red-800/90 shadow-md items-center">
-  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-    <div class="text-2xl font-bold text-red-300">{{ title }}</div>
+<nav
+  class="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-800 shadow-2xl"
+>
+  <!-- Info sáv (csak nagy képernyőkön) -->
+  <div
+    class="h-12 overflow-hidden bg-black w-full hidden xl:flex justify-between items-center px-4 border-b border-gray-800"
+  >
+    <a
+      *ngFor="let item of infoItems"
+      [href]="item.link"
+      class="flex group py-2 px-5 hover:cursor-pointer gap-2 text-white text-sm xl:text-md 2xl:text-lg border-gray-700 border-x hover:border-gray-500 xl:min-w-64 2xl:min-w-96 justify-between transition-all duration-300"
+    >
+      <!-- Ikon -->
+      <div class="w-7 h-7 self-center">
+        <svg
+          *ngIf="item.icon === 'truck'"
+          class="w-7 h-7"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"
+          ></path>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"
+          ></path>
+        </svg>
 
-    <div class="space-x-6 flex">
-      <div
-        *ngFor="let item of navbarItems"
-        routerLink="{{ item.link }}"
-        class="inline-block text-slate-100 hover:text-red-600 cursor-pointer"
-      >
-        {{ item.name }}
+        <svg
+          *ngIf="item.icon === 'shield'"
+          class="w-7 h-7"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+          ></path>
+        </svg>
+
+        <svg
+          *ngIf="item.icon === 'help'"
+          class="w-7 h-7"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          ></path>
+        </svg>
+
+        <svg
+          *ngIf="item.icon === 'smartphone'"
+          class="w-7 h-7"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+          ></path>
+        </svg>
       </div>
 
-      <div *ngIf="isUserLoggedIn" class="flex gap-4 relative">
+      <!-- Szöveg -->
+      <div
+        class="flex flex-col font-black leading-tight tracking-wider text-nowrap"
+      >
+        <h3 class="text-white">{{ item.title }}</h3>
+        <p class="px-2 text-gray-400 font-normal">{{ item.description }}</p>
+      </div>
+
+      <!-- Nyíl ikon -->
+      <svg
+        class="mx-2 w-8 h-8 self-center opacity-20 group-hover:opacity-100 transition-opacity duration-300"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
+        ></path>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Fő navbar -->
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 group">
         <div
-          (click)="kijelentkezes()"
-          class="inline-block text-slate-100 hover:text-red-600 cursor-pointer"
+          class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
         >
-          Kijelentkezés
-        </div>
-        <a
-          href="/kosar"
-          class="inline-block text-slate-100 hover:text-red-600 cursor-pointer -mt-1.5"
-        >
-          <img
-            src="https://images.vexels.com/media/users/3/200098/isolated/preview/7ad7c76da9a0cd7d2b01b64b2590617b-shopping-cart-icon-shopping-cart-icon.png"
-            alt="Bevásárlo kocsika"
-            class="w-10 h-10 cursor-pointer bg-white rounded-full p-1 hover:bg-gray-200"
-          />
-          <span
-            class="absolute top-4 right-6 bg-red-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center"
-            >{{ cartAmount }}</span
+          <svg
+            class="w-6 h-6 text-gray-900"
+            fill="currentColor"
+            viewBox="0 0 20 20"
           >
+            <path
+              d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+            />
+          </svg>
+        </div>
+        <div>
+          <h1
+            class="text-2xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-300"
+          >
+            {{ title }}
+          </h1>
+          <p class="text-xs text-gray-400">Baja legjobb pizzériája!</p>
+        </div>
+      </a>
+
+      <!-- Links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a
+          *ngFor="let item of navbarItems"
+          [routerLink]="item.link"
+          routerLinkActive="active-link"
+          class="relative text-gray-300 hover:text-yellow-400 font-semibold transition-colors duration-300 group"
+        >
+          {{ item.name }}
+          <span
+            class="absolute bottom-0 left-0 w-0 h-0.5 bg-yellow-400 group-hover:w-full transition-all duration-300"
+          ></span>
         </a>
+      </div>
+
+      <!-- User MUVELETEK -->
+      <div class="flex items-center gap-6">
+        <div *ngIf="isUserLoggedIn" class="flex items-center gap-4">
+          <!-- Kocsi -->
+          <a href="/kosar" class="relative group">
+            <div
+              class="w-10 h-10 bg-gray-800 hover:bg-yellow-400 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110"
+            >
+              <svg
+                class="w-5 h-5 text-gray-300 group-hover:text-gray-900 transition-colors duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+            </div>
+            <span
+              *ngIf="cartAmount > 0"
+              class="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center animate-pulse"
+            >
+              {{ cartAmount }}
+            </span>
+          </a>
+
+          <!-- Logout -->
+          <button
+            (click)="kijelentkezes()"
+            class="px-6 py-2 bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white border border-red-600 rounded-full font-semibold transition-all duration-300 flex items-center gap-2"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+              ></path>
+            </svg>
+            <span class="hidden lg:inline">Kijelentkezés</span>
+          </button>
+        </div>
+
+        <!-- Ha nincs belepve -->
+        <div *ngIf="!isUserLoggedIn" class="flex items-center gap-3">
+          <a
+            href="/bejelentkezes"
+            class="px-6 py-2 text-gray-300 hover:text-yellow-400 font-semibold transition-colors duration-300"
+          >
+            Bejelentkezés
+          </a>
+          <a
+            href="/regisztracio"
+            class="px-6 py-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 rounded-full font-bold transition-all duration-300 hover:scale-105"
+          >
+            Regisztráció
+          </a>
+        </div>
+
+        <!-- Mobile Men -->
+        <button
+          class="md:hidden w-10 h-10 bg-gray-800 hover:bg-gray-700 rounded-lg flex items-center justify-center transition-colors duration-300"
+        >
+          <svg
+            class="w-6 h-6 text-gray-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
+</nav>
+
+<div
+  *ngIf="isHelpOpen"
+  class="fixed bottom-0 right-0 min-h-[70vh] bg-black/90 w-full max-w-xl z-5 overflow-auto text-white shadow-2xl rounded-tl-2xl"
+>
+  <div
+    class="flex justify-between text-2xl font-bold p-4 border-b border-gray-300"
+  >
+    <h1>Baja Pizza</h1>
+    <h1>Segítség Kérése</h1>
+    <h1 class="hover:cursor-pointer" (click)="changeHelpOpen()">X</h1>
+  </div>
 </div>
+
+<div class="h-32 xl:h-32"></div>

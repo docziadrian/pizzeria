@@ -28,3 +28,11 @@
 [2025-11-05 09:39:09] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
 [2025-11-05 10:21:56] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
 [2025-11-05 10:22:03] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 11:59:53] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 11:59:56] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 11:59:59] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 12:00:09] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 12:00:16] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 12:00:18] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 12:00:21] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 12:21:35] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist

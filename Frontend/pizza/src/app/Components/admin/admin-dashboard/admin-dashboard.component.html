@@ -1,72 +1,330 @@
-<div class="container mx-auto px-4 py-8 max-w-7xl">
-  <!-- Fejléc -->
-  <div class="text-center mb-12">
-    <h1 class="text-4xl font-bold text-gray-800 mb-3">
-      Üdvözöllek az
-      <span class="px-3 py-1 bg-orange-600 text-gray-100 rounded-lg"
-        >Admin</span
+<div
+  class="min-h-screen bg-gradient-to-b from-gray-900 to-black py-12 px-4 -mt-2"
+>
+  <div class="container mx-auto max-w-7xl">
+    <!-- Fejléc -->
+    <div class="text-center mb-16">
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+        Admin <span class="text-yellow-400">Vezérlőpult</span>
+      </h1>
+      <p class="text-xl text-gray-300">
+        Kezeld a pizzéria rendszerét egyszerűen és hatékonyan
+      </p>
+    </div>
+
+    <!-- Admin Panel Kártyák -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Pizza Kezelés -->
+      <div
+        class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-xl hover:shadow-2xl hover:border-yellow-400/50 transition-all duration-300 overflow-hidden group cursor-pointer"
+        (click)="navigateTo('/pizzak/felvesz')"
       >
-      panelben
-    </h1>
-    <p class="text-gray-600">
-      Kezeld a pizzéria rendszerét egyszerűen és hatékonyan
-    </p>
-  </div>
-
-  <!-- Admin Panel Kártyák -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    <div
-      *ngFor="let panel of adminPanel"
-      class="bg-white border border-gray-200 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group"
-    >
-      <div class="p-6">
-        <!-- Ikon konténer -->
-        <div
-          class="mb-4 flex items-center justify-center w-14 h-14 rounded-full bg-orange-100 group-hover:bg-orange-200 transition-colors duration-300"
-        >
-          <svg
-            class="w-7 h-7 text-orange-600"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+        <div class="p-6">
+          <!-- Ikon konténer -->
+          <div
+            class="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-yellow-400/20 group-hover:bg-yellow-400/30 transition-colors duration-300"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-            ></path>
-          </svg>
+            <svg
+              class="w-8 h-8 text-yellow-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+          </div>
+
+          <!-- Cím -->
+          <h2 class="text-2xl font-bold text-white mb-3">Pizza Kezelés</h2>
+
+          <!-- Leírás -->
+          <p class="text-gray-400 text-sm mb-6 min-h-[3rem]">
+            Pizzák hozzáadása, módosítása és törlése
+          </p>
+
+          <!-- Navigációs gomb -->
+          <button
+            class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-4 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+          >
+            Megnyitás
+            <svg
+              class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              ></path>
+            </svg>
+          </button>
         </div>
+      </div>
 
-        <!-- Cím -->
-        <h2 class="text-xl font-bold text-gray-800 mb-2">{{ panel.name }}</h2>
-
-        <!-- Leírás -->
-        <p class="text-gray-600 text-sm mb-4">
-          {{ getDescription(panel.name) }}
-        </p>
-
-        <!-- Navigációs gomb -->
-        <button
-          (click)="navigateTo(panel.link)"
-          class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
-        >
-          Megnyitás
-          <svg
-            class="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+      <!-- Felhasználók Kezelése -->
+      <div
+        class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-xl hover:shadow-2xl hover:border-yellow-400/50 transition-all duration-300 overflow-hidden group cursor-pointer"
+        (click)="navigateTo('/admin/felhasznalo-kezeles')"
+      >
+        <div class="p-6">
+          <!-- Ikon konténer -->
+          <div
+            class="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-yellow-400/20 group-hover:bg-yellow-400/30 transition-colors duration-300"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
-            ></path>
-          </svg>
-        </button>
+            <svg
+              class="w-8 h-8 text-yellow-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+              ></path>
+            </svg>
+          </div>
+
+          <!-- Cím -->
+          <h2 class="text-2xl font-bold text-white mb-3">Felhasználók</h2>
+
+          <!-- Leírás -->
+          <p class="text-gray-400 text-sm mb-6 min-h-[3rem]">
+            Felhasználói fiókok és jogosultságok kezelése
+          </p>
+
+          <!-- Navigációs gomb -->
+          <button
+            class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-4 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+          >
+            Megnyitás
+            <svg
+              class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Rendelések -->
+      <div
+        class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-xl hover:shadow-2xl hover:border-yellow-400/50 transition-all duration-300 overflow-hidden group cursor-pointer"
+        (click)="navigateTo('/admin/rendelesek-kezelese')"
+      >
+        <div class="p-6">
+          <!-- Ikon konténer -->
+          <div
+            class="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-yellow-400/20 group-hover:bg-yellow-400/30 transition-colors duration-300"
+          >
+            <svg
+              class="w-8 h-8 text-yellow-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"
+              ></path>
+            </svg>
+          </div>
+
+          <!-- Cím -->
+          <h2 class="text-2xl font-bold text-white mb-3">Rendelések</h2>
+
+          <!-- Leírás -->
+          <p class="text-gray-400 text-sm mb-6 min-h-[3rem]">
+            Rendelések megtekintése és állapotuk kezelése
+          </p>
+
+          <!-- Navigációs gomb -->
+          <button
+            class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-4 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+          >
+            Megnyitás
+            <svg
+              class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Statisztikák -->
+      <div
+        class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-xl hover:shadow-2xl hover:border-yellow-400/50 transition-all duration-300 overflow-hidden group cursor-pointer"
+        (click)="navigateTo('/admin/statisztikak')"
+      >
+        <div class="p-6">
+          <!-- Ikon konténer -->
+          <div
+            class="mb-6 flex items-center justify-center w-16 h-16 rounded-full bg-yellow-400/20 group-hover:bg-yellow-400/30 transition-colors duration-300"
+          >
+            <svg
+              class="w-8 h-8 text-yellow-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+              ></path>
+            </svg>
+          </div>
+
+          <!-- Cím -->
+          <h2 class="text-2xl font-bold text-white mb-3">Statisztikák</h2>
+
+          <!-- Leírás -->
+          <p class="text-gray-400 text-sm mb-6 min-h-[3rem]">
+            Értékesítési adatok és teljesítmény elemzése
+          </p>
+
+          <!-- Navigációs gomb -->
+          <button
+            class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-4 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+          >
+            Megnyitás
+            <svg
+              class="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gyors statisztikák -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+      <div
+        class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6"
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-gray-400 text-sm mb-1">Mai rendelések</p>
+            <p class="text-3xl font-bold text-yellow-400">
+              {{ maiRendelesek }}
+            </p>
+          </div>
+          <div
+            class="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center"
+          >
+            <svg
+              class="w-6 h-6 text-yellow-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6"
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-gray-400 text-sm mb-1">Aktív felhasználók</p>
+            <p class="text-3xl font-bold text-yellow-400">
+              {{ aktivFelhasznalok }}
+            </p>
+          </div>
+          <div
+            class="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center"
+          >
+            <svg
+              class="w-6 h-6 text-yellow-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6"
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-gray-400 text-sm mb-1">Mai bevétel</p>
+            <p class="text-3xl font-bold text-yellow-400">
+              {{ maiBevetel | number }} Ft
+            </p>
+          </div>
+          <div
+            class="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center"
+          >
+            <svg
+              class="w-6 h-6 text-yellow-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "RobotoItaliane";
+  src: url("assets/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "RobotoItaliane";
+}

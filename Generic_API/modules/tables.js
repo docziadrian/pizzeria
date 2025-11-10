@@ -230,6 +230,56 @@ router.delete("/:table/", (req, res) => {
   );
 });
 
+router.patch("/:table/:id/change-password", (req, res) => {
+  const table = req.params.table;
+  const id = req.params.id;
+  const { currentPassword, newPassword } = req.body;
+
+  if (!currentPassword || !newPassword) {
+    return res
+      .status(400)
+      .json({ error: "HIBA! Nem adtál meg minden adatot!" });
+  }
+
+  if (!newPassword.match(passwdRegExp)) {
+    return res.status(400).json({ error: "HIBA! Az új jelszó nem elég erős!" });
+  }
+
+  // Ellenőrizzük a jelenlegi jelszót
+  query(
+    `SELECT id FROM ${table} WHERE id = ? AND password = ?`,
+    [id, SHA1(currentPassword).toString()],
+    (err, results) => {
+      if (err) {
+        return res.status(500).json({ error: err.message });
+      }
+
+      if (results.length === 0) {
+        return res.status(400).json({ error: "HIBA! Hibás jelenlegi jelszó!" });
+      }
+
+      // Frissítjük az új jelszóval
+      query(
+        `UPDATE ${table} SET password = ? WHERE id = ?`,
+        [SHA1(newPassword).toString(), id],
+        (err, results) => {
+          if (err) {
+            return res.status(500).json({ error: err.message });
+          }
+          logger.verbose(
+            `[PATCH /${table}/${id}/change-password] -> Jelszó frissítve.`
+          );
+          res
+            .status(200)
+            .json({ success: true, message: "Sikeres jelszó változtatás!" });
+        },
+        req
+      );
+    },
+    req
+  );
+});
+
 module.exports = router;
 
 function getOp(op) {

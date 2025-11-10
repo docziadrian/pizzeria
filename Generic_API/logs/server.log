@@ -655,3 +655,706 @@
 [2025-11-05 10:54:26] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
 [2025-11-05 10:54:29] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
 [2025-11-05 10:54:29] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:06:09] - [32minfo[39m: server listening on port 3000
+[2025-11-10 08:06:59] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 43 ms
+[2025-11-10 08:06:59] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:07:08] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 3 ms
+[2025-11-10 08:07:08] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:07:10] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 08:07:11] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:07:20] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 08:07:20] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:07:41] - [36mverbose[39m: [GET//users] - 4 record(s) sent. | 3 ms
+[2025-11-10 08:07:41] - [36mverbose[39m: [GET /users] -> 4 rekord küldve válaszként
+[2025-11-10 08:08:09] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 08:08:09] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:13:56] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 08:13:56] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:14:20] - [36mverbose[39m: [GET//users] - 4 record(s) sent. | 2 ms
+[2025-11-10 08:14:20] - [36mverbose[39m: [GET /users] -> 4 rekord küldve válaszként
+[2025-11-10 08:14:20] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 6 ms
+[2025-11-10 08:14:20] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:14:20] - [36mverbose[39m: [GET//users] - 4 record(s) sent. | 5 ms
+[2025-11-10 08:14:20] - [36mverbose[39m: [GET /users] -> 4 rekord küldve válaszként
+[2025-11-10 08:14:20] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 3 ms
+[2025-11-10 08:14:20] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:14:20] - [36mverbose[39m: [GET//orders] - 7 record(s) sent. | 10 ms
+[2025-11-10 08:14:20] - [36mverbose[39m: [GET /orders] -> 7 rekord küldve válaszként
+[2025-11-10 08:14:34] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 08:14:34] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:14:44] - [36mverbose[39m: [GET//users] - 4 record(s) sent. | 1 ms
+[2025-11-10 08:14:44] - [36mverbose[39m: [GET /users] -> 4 rekord küldve válaszként
+[2025-11-10 08:14:44] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 08:14:44] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:14:44] - [36mverbose[39m: [GET//orders] - 7 record(s) sent. | 1 ms
+[2025-11-10 08:14:44] - [36mverbose[39m: [GET /orders] -> 7 rekord küldve válaszként
+[2025-11-10 08:14:44] - [36mverbose[39m: [GET//users] - 4 record(s) sent. | 3 ms
+[2025-11-10 08:14:44] - [36mverbose[39m: [GET /users] -> 4 rekord küldve válaszként
+[2025-11-10 08:14:44] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 4 ms
+[2025-11-10 08:14:44] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:14:46] - [36mverbose[39m: [GET//users] - 4 record(s) sent. | 1 ms
+[2025-11-10 08:14:46] - [36mverbose[39m: [GET /users] -> 4 rekord küldve válaszként
+[2025-11-10 08:14:48] - [36mverbose[39m: [GET//users] - 4 record(s) sent. | 2 ms
+[2025-11-10 08:14:48] - [36mverbose[39m: [GET /users] -> 4 rekord küldve válaszként
+[2025-11-10 08:14:48] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 3 ms
+[2025-11-10 08:14:48] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:14:48] - [36mverbose[39m: [GET//orders] - 7 record(s) sent. | 5 ms
+[2025-11-10 08:14:48] - [36mverbose[39m: [GET /orders] -> 7 rekord küldve válaszként
+[2025-11-10 08:14:48] - [36mverbose[39m: [GET//users] - 4 record(s) sent. | 4 ms
+[2025-11-10 08:14:48] - [36mverbose[39m: [GET /users] -> 4 rekord küldve válaszként
+[2025-11-10 08:14:48] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 3 ms
+[2025-11-10 08:14:48] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 08:59:36] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 08:59:36] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:01:38] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:01:38] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:02:59] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:02:59] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:03:12] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 09:03:12] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:03:23] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:03:23] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:03:41] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:03:41] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:03:49] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:03:49] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:03:52] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:03:52] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:04:14] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:04:14] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:04:35] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:04:35] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:04:45] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:04:45] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:04:52] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:04:52] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:05:11] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:05:11] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:05:25] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:05:25] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:05:37] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:05:37] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:05:47] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:05:47] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:05:49] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:05:49] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:06:52] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:06:52] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:06:58] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:06:58] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:07:07] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:07:07] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:07:12] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:07:12] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:07:19] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:07:19] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:07:25] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:07:25] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:07:52] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:07:52] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:07:57] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:07:57] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:09:26] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 09:09:26] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:09:33] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:09:33] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:09:41] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 09:09:41] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:09:44] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:09:44] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:09:49] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:09:49] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:09:52] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:09:52] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:09:55] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 3 ms
+[2025-11-10 09:09:55] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:09:57] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:09:57] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:10:07] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:10:07] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:10:11] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:10:11] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:10:18] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:10:18] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:10:28] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:10:28] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:10:34] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:10:34] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:10:38] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:10:38] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:10:46] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:10:46] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:10:51] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:10:51] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:11:00] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:11:00] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:11:03] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:11:03] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:11:33] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:11:33] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:11:45] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:11:45] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:12:02] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:12:02] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:12:03] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 09:12:03] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:12:51] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:12:51] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:14:38] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:14:38] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:15:19] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:15:19] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:15:25] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:15:25] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:15:37] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:15:37] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:15:48] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:15:48] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:15:54] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:15:54] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:15:58] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:15:58] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:16:09] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:16:09] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:16:16] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:16:16] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:16:21] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:16:21] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:16:34] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:16:34] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:16:45] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:16:45] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:16:53] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:16:53] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:17:09] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:17:09] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:17:17] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:17:17] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:17:19] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:17:19] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:17:33] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:17:33] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:17:41] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:17:41] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:17:44] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:17:44] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:17:50] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:17:50] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:17:57] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:17:57] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:18:00] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:18:00] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:18:08] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:18:08] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:18:14] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:18:14] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:18:18] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:18:18] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:18:27] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:18:27] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:18:37] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:18:37] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:18:41] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:18:41] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:18:47] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:18:47] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:18:55] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:18:55] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:19:00] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:19:00] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:19:03] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:19:03] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:19:29] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:19:29] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:19:33] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:19:33] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:19:37] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:19:37] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:19:41] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:19:41] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:19:49] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:19:49] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:19:52] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:19:52] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:19:55] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:19:55] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:19:58] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:19:58] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:20:18] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:20:18] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:20:21] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:20:21] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:20:29] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:20:29] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:20:31] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:20:31] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:20:33] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:20:33] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:20:36] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:20:36] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:20:47] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:20:47] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:20:50] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:20:50] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:20:52] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:20:52] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:20:54] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:20:54] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:21:55] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:21:55] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:22:12] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:22:12] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:22:20] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:22:20] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:22:24] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:22:24] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:22:27] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:22:27] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:22:56] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:22:56] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:23:22] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:23:22] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:23:30] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:23:30] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:23:33] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:23:33] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:23:40] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:23:40] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:23:50] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:23:50] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:23:51] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:23:51] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:23:51] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:23:51] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:23:54] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:23:54] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:24:10] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:24:10] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:24:13] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:24:13] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:24:13] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:24:13] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:24:14] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:24:14] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:24:18] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:24:18] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:25:12] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:25:12] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:25:23] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 09:25:23] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:25:36] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:25:36] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:25:41] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:25:41] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:26:01] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:26:01] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:26:13] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:26:13] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:26:41] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:26:41] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:26:46] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:26:46] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:26:52] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:26:52] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:26:54] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:26:54] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:26:57] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:26:57] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:27:01] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:27:01] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:27:03] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:27:03] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:27:03] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:27:03] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:27:14] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:27:14] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:27:16] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:27:16] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:28:35] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:28:35] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:28:41] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:28:41] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:28:42] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:28:42] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:28:48] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:28:48] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:29:22] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:29:22] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:29:35] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:29:35] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:29:43] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:29:43] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:29:58] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:29:58] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:30:03] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:30:03] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:30:04] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:30:04] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:30:18] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:30:18] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:30:24] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:30:24] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:30:34] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:30:34] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:30:42] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:30:42] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:31:03] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:31:03] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:31:21] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:31:21] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:31:24] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:31:24] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:31:28] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:31:28] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:31:32] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:31:32] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:31:37] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:31:37] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:31:44] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:31:44] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:31:50] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:31:50] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:31:58] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:31:58] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:32:13] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:32:13] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:32:21] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:32:21] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:32:32] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:32:32] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:32:43] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:32:43] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:32:47] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 09:32:47] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:32:55] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:32:55] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:32:55] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:32:55] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:32:57] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:32:57] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:32:58] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:32:58] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:33:04] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:33:04] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:33:10] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:33:10] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:34:11] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:34:11] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:34:11] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:34:11] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:34:12] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:34:12] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:34:46] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:34:46] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:35:32] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:35:32] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:35:48] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:35:48] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:36:13] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:36:13] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:36:26] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:36:26] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:36:37] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:36:37] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:36:49] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:36:49] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:37:07] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:37:07] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:37:10] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:37:10] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:37:19] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:37:19] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:37:27] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:37:27] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:37:31] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:37:31] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:41:32] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:41:32] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:57:39] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:57:39] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:57:44] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:57:44] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:57:44] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:57:44] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:58:37] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 09:58:37] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:58:44] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:58:44] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:59:00] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:59:00] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:59:04] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:59:04] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:59:12] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:59:12] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:59:49] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:59:49] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:59:53] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:59:53] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:59:56] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:59:56] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 09:59:58] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 09:59:58] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:00:01] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 10:00:01] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:00:03] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:00:03] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:00:08] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 10:00:08] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:00:11] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:00:11] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:00:13] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:00:13] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:00:26] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 10:00:26] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:00:51] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 10:00:51] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:00:56] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:00:56] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:00:57] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:00:57] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:00:59] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 10:00:59] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:01:15] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:01:15] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:01:17] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 10:01:17] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:01:19] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:01:19] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:01:22] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:01:22] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:01:25] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:01:25] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:01:31] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:01:31] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:01:36] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 10:01:36] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:01:58] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:01:58] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:02:29] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:02:29] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:02:30] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:02:30] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:02:31] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 10:02:31] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:02:58] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 10:02:58] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:04:37] - [36mverbose[39m: [POST//orders] - 1 record(s) affected. | 3 ms
+[2025-11-10 10:04:37] - [36mverbose[39m: [POST /orders] -> 1 rekord feltöltésre került.
+[2025-11-10 10:04:39] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:04:39] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:11:45] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:11:45] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:11:56] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:11:56] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:14:35] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:14:35] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:15:40] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:15:40] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:15:41] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:15:41] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:15:42] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:15:42] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:15:42] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:15:42] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:15:42] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:15:42] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:16:56] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:16:56] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:17:46] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:17:46] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:18:12] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:18:12] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:18:26] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:18:26] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:18:34] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 10:18:34] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:18:44] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:18:44] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:18:51] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:18:51] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 10:19:00] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 10:19:00] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 11:29:56] - [36mverbose[39m: [POST//users/registration] - 0 record(s) affected. | 2 ms
+[2025-11-10 11:29:56] - [36mverbose[39m: [POST//users/registration] - 1 record(s) affected. | 4 ms
+[2025-11-10 11:29:56] - [36mverbose[39m: [POST /users/registration] -> 1 új felhasználó regisztrálva.
+[2025-11-10 11:29:56] - [36mverbose[39m: [POST//users/login] - 1 record(s) affected. | 1 ms
+[2025-11-10 11:29:56] - [36mverbose[39m: [POST /users/login] -> 1 rekord küldve válaszként
+[2025-11-10 11:29:57] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 11:29:57] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 11:29:57] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 11:29:57] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 11:30:00] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 11:30:00] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 11:57:28] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 11:57:28] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 11:57:41] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 11:57:41] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 11:57:53] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 11:57:53] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 11:57:58] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 11:57:58] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 11:59:20] - [36mverbose[39m: [PATCH//users/4] - 1 record(s) affected. | 4 ms
+[2025-11-10 11:59:20] - [36mverbose[39m: [PATCH /users/4] -> 1 rekord frissítve.
+[2025-11-10 11:59:53] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 11:59:56] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 11:59:59] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 12:00:09] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 12:00:16] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 12:00:18] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 12:00:21] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
+[2025-11-10 12:01:46] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 12:01:46] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:02:05] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 12:02:05] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:02:56] - [32minfo[39m: server listening on port 3000
+[2025-11-10 12:05:51] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 9 ms
+[2025-11-10 12:05:51] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:05:57] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 2 ms
+[2025-11-10 12:05:57] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:06:16] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 12:06:16] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:06:42] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 3 ms
+[2025-11-10 12:06:42] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:06:58] - [36mverbose[39m: [PATCH//users/4/change-password] - 0 record(s) affected. | 1 ms
+[2025-11-10 12:07:02] - [36mverbose[39m: [PATCH//users/4/change-password] - 1 record(s) affected. | 1 ms
+[2025-11-10 12:07:02] - [36mverbose[39m: [PATCH//users/4/change-password] - 1 record(s) affected. | 5 ms
+[2025-11-10 12:07:02] - [36mverbose[39m: [PATCH /users/4/change-password] -> Jelszó frissítve.
+[2025-11-10 12:07:27] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 12:07:27] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:07:33] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:07:33] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:07:34] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:07:34] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:07:36] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:07:36] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:07:50] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:07:50] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:07:53] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:07:53] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:07:53] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 4 ms
+[2025-11-10 12:07:53] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:07:53] - [36mverbose[39m: [GET//orders] - 8 record(s) sent. | 4 ms
+[2025-11-10 12:07:53] - [36mverbose[39m: [GET /orders] -> 8 rekord küldve válaszként
+[2025-11-10 12:07:53] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 3 ms
+[2025-11-10 12:07:53] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:07:53] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 8 ms
+[2025-11-10 12:07:53] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:11:21] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 12:11:21] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:11:24] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 12:11:24] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:11:27] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:11:27] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:11:31] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:11:31] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:11:42] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:11:42] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:12:08] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 2 ms
+[2025-11-10 12:12:08] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:12:11] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:12:11] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:12:14] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:12:14] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:12:23] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 12:12:23] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:12:25] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:12:25] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:12:30] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 12:12:30] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:12:32] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 12:12:32] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:12:37] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 0 ms
+[2025-11-10 12:12:37] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:12:58] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:12:58] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:13:00] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:13:00] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:13:02] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 0 ms
+[2025-11-10 12:13:02] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:13:04] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 12:13:04] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:13:18] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 12:13:18] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:13:20] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:13:20] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:13:26] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:13:26] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:13:31] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:13:31] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:13:33] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:13:33] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:13:46] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 12:13:46] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:13:54] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 0 ms
+[2025-11-10 12:13:54] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:13:56] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:13:56] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:13:56] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 4 ms
+[2025-11-10 12:13:56] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:13:56] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 4 ms
+[2025-11-10 12:13:56] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:13:56] - [36mverbose[39m: [GET//orders] - 8 record(s) sent. | 6 ms
+[2025-11-10 12:13:56] - [36mverbose[39m: [GET /orders] -> 8 rekord küldve válaszként
+[2025-11-10 12:13:56] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:13:56] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:13:59] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:13:59] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:17:18] - [36mverbose[39m: [GET//orders] - 8 record(s) sent. | 2 ms
+[2025-11-10 12:17:18] - [36mverbose[39m: [GET /orders] -> 8 rekord küldve válaszként
+[2025-11-10 12:17:18] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:17:18] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:17:24] - [36mverbose[39m: [GET//orders] - 8 record(s) sent. | 1 ms
+[2025-11-10 12:17:24] - [36mverbose[39m: [GET /orders] -> 8 rekord küldve válaszként
+[2025-11-10 12:17:24] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 2 ms
+[2025-11-10 12:17:24] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:17:34] - [36mverbose[39m: [POST//orders] - 1 record(s) affected. | 5 ms
+[2025-11-10 12:17:34] - [36mverbose[39m: [POST /orders] -> 1 rekord feltöltésre került.
+[2025-11-10 12:17:34] - [36mverbose[39m: [POST//orders] - 1 record(s) affected. | 6 ms
+[2025-11-10 12:17:34] - [36mverbose[39m: [POST /orders] -> 1 rekord feltöltésre került.
+[2025-11-10 12:17:35] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:17:35] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:17:37] - [36mverbose[39m: [GET//pizza] - 3 record(s) sent. | 1 ms
+[2025-11-10 12:17:37] - [36mverbose[39m: [GET /pizza] -> 3 rekord küldve válaszként
+[2025-11-10 12:17:38] - [36mverbose[39m: [GET//orders] - 10 record(s) sent. | 1 ms
+[2025-11-10 12:17:38] - [36mverbose[39m: [GET /orders] -> 10 rekord küldve válaszként
+[2025-11-10 12:17:38] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:17:38] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:17:41] - [36mverbose[39m: [GET//orders] - 10 record(s) sent. | 0 ms
+[2025-11-10 12:17:41] - [36mverbose[39m: [GET /orders] -> 10 rekord küldve válaszként
+[2025-11-10 12:17:41] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:17:41] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:17:43] - [36mverbose[39m: [GET//orders] - 10 record(s) sent. | 0 ms
+[2025-11-10 12:17:43] - [36mverbose[39m: [GET /orders] -> 10 rekord küldve válaszként
+[2025-11-10 12:17:43] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:17:43] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:17:43] - [36mverbose[39m: [GET//orders] - 10 record(s) sent. | 1 ms
+[2025-11-10 12:17:43] - [36mverbose[39m: [GET /orders] -> 10 rekord küldve válaszként
+[2025-11-10 12:17:43] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 0 ms
+[2025-11-10 12:17:43] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:17:45] - [36mverbose[39m: [GET//orders] - 10 record(s) sent. | 1 ms
+[2025-11-10 12:17:45] - [36mverbose[39m: [GET /orders] -> 10 rekord küldve válaszként
+[2025-11-10 12:17:45] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:17:45] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:18:17] - [36mverbose[39m: [GET//orders] - 10 record(s) sent. | 1 ms
+[2025-11-10 12:18:17] - [36mverbose[39m: [GET /orders] -> 10 rekord küldve válaszként
+[2025-11-10 12:18:17] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:18:17] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:21:35] - [36mverbose[39m: [GET//orders] - 10 record(s) sent. | 1 ms
+[2025-11-10 12:21:35] - [36mverbose[39m: [GET /orders] -> 10 rekord küldve válaszként
+[2025-11-10 12:21:35] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-10 12:22:22] - [36mverbose[39m: [GET//orders] - 10 record(s) sent. | 1 ms
+[2025-11-10 12:22:22] - [36mverbose[39m: [GET /orders] -> 10 rekord küldve válaszként
+[2025-11-10 12:22:22] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:22:22] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:23:04] - [36mverbose[39m: [GET//orders] - 10 record(s) sent. | 2 ms
+[2025-11-10 12:23:04] - [36mverbose[39m: [GET /orders] -> 10 rekord küldve válaszként
+[2025-11-10 12:23:04] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:23:04] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:23:23] - [36mverbose[39m: [GET//orders] - 10 record(s) sent. | 2 ms
+[2025-11-10 12:23:23] - [36mverbose[39m: [GET /orders] -> 10 rekord küldve válaszként
+[2025-11-10 12:23:23] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 2 ms
+[2025-11-10 12:23:23] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:26:42] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:26:42] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
+[2025-11-10 12:26:45] - [36mverbose[39m: [GET//users] - 5 record(s) sent. | 1 ms
+[2025-11-10 12:26:45] - [36mverbose[39m: [GET /users] -> 5 rekord küldve válaszként
