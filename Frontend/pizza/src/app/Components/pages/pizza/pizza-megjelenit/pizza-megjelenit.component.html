@@ -22,7 +22,7 @@
       >
         <!-- Pizza kép/videó -->
         <div
-          class="relative overflow-hidden h-58"
+          class="relative overflow-hidden h-64"
           (mouseenter)="onMouseEnter(pizza)"
           (mouseleave)="onMouseLeave(pizza)"
         >
@@ -37,12 +37,11 @@
           <!-- Videó (hover állapotban) -->
           <video
             *ngIf="pizza.isHovering"
-            src="pizza.mp4"
+            [src]="pizza.videoURL"
             class="w-full h-full object-cover"
             autoplay
             loop
             muted
-            controls
             playsinline
           ></video>
 
