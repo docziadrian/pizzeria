@@ -40,6 +40,8 @@ export class NavbarComponent implements OnInit {
     { name: 'Főoldal', link: '/' },
     { name: 'Pizzák', link: '/pizzak' },
     { name: 'Profil', link: '/fiokom' },
+    { name: 'Foglalás', link: '/foglalas' },
+    { name: 'Értékelés', link: '/ertekeles' },
   ];
 
   navbarItems: any[] = [];
@@ -50,6 +52,8 @@ export class NavbarComponent implements OnInit {
     { name: 'Pizzák', link: '/pizzak' },
     { name: 'Pizza felvesz', link: '/pizzak/felvesz' },
     { name: 'Profil', link: '/fiokom' },
+    { name: 'Foglalás', link: '/foglalas' },
+    { name: 'Értékelés', link: '/ertekeles' },
   ];
 
   cartAmount: number = 0;

@@ -36,3 +36,50 @@
 [2025-11-10 12:00:18] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
 [2025-11-10 12:00:21] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'oldPassword' in 'field list'
 [2025-11-10 12:21:35] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 09:33:01] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_pizzeria.foglalas' doesn't exist
+[2025-11-11 09:33:01] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 09:33:07] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 09:33:11] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 09:33:50] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 09:40:08] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:28:01] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:28:58] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'user' in 'where clause'
+[2025-11-11 10:29:19] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'user' in 'where clause'
+[2025-11-11 10:29:32] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'user' in 'where clause'
+[2025-11-11 10:29:32] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:30:21] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'user' in 'where clause'
+[2025-11-11 10:30:44] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'user' in 'where clause'
+[2025-11-11 10:31:02] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:31:51] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:31:57] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'user' in 'where clause'
+[2025-11-11 10:32:46] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:34:38] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:35:32] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:53:13] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:53:33] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_pizzeria.order_items' doesn't exist
+[2025-11-11 10:53:33] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:53:39] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'user' in 'where clause'
+[2025-11-11 10:53:39] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:53:41] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_pizzeria.order_items' doesn't exist
+[2025-11-11 10:53:41] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:54:18] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'p.name' in 'field list'
+[2025-11-11 10:54:18] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:54:19] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'p.name' in 'field list'
+[2025-11-11 10:54:19] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:55:01] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'p.name' in 'field list'
+[2025-11-11 10:55:08] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'p.name' in 'field list'
+[2025-11-11 10:55:19] - [31merror[39m: [DATABASE ERROR] -> ER_BAD_FIELD_ERROR: Unknown column 'p.name' in 'field list'
+[2025-11-11 10:55:19] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:57:13] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_pizzeria.order_items' doesn't exist
+[2025-11-11 10:57:13] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:57:14] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_pizzeria.order_items' doesn't exist
+[2025-11-11 10:57:14] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:57:14] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_pizzeria.order_items' doesn't exist
+[2025-11-11 10:57:14] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:57:15] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_pizzeria.order_items' doesn't exist
+[2025-11-11 10:57:15] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:58:18] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table '2025_pizzeria.order_items' doesn't exist
+[2025-11-11 10:58:18] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 10:58:28] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist
+[2025-11-11 12:04:53] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'pizza.mp4' doesn't exist
+[2025-11-11 12:04:53] - [31merror[39m: [DATABASE ERROR] -> ER_NO_SUCH_TABLE: Table 'favicon.ico' doesn't exist

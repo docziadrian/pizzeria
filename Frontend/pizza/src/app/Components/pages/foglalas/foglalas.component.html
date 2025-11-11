@@ -1,0 +1,567 @@
+<div
+  class="min-h-screen bg-gradient-to-b from-gray-900 to-black py-12 px-4 -mt-2"
+>
+  <div class="container mx-auto max-w-7xl">
+    <!-- Fejléc -->
+    <div class="text-center mb-12">
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+        Asztal <span class="text-yellow-400">Foglalás</span>
+      </h1>
+      <p class="text-xl text-gray-300">
+        Válaszd ki a megfelelő asztalt és foglald le egyszerűen
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+      <!-- Bal oldal - Asztalok -->
+      <div
+        class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-xl p-6"
+      >
+        <div class="mb-6">
+          <div
+            class="flex items-center gap-3 bg-green-900/30 border border-green-700 rounded-xl p-4"
+          >
+            <svg
+              class="w-6 h-6 text-green-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            <p class="text-green-400 font-semibold">
+              Az elérhető asztalokat a képen jelenítjük meg!
+            </p>
+          </div>
+        </div>
+
+        <!-- Étterem térkép -->
+        <div class="relative">
+          <img
+            src="https://i.ibb.co/VY1wFGH1/unnamed.jpg"
+            alt="Étterem tervrajz"
+            class="w-full rounded-xl shadow-lg"
+          />
+
+          <!-- Asztalok overlay -->
+          <div
+            class="absolute top-0 left-0 w-full h-full flex items-center justify-center pointer-events-none"
+          >
+            <div class="flex flex-col space-y-4">
+              <!-- Asztal 1 -->
+              <div
+                (click)="handleASztalChange(asztalok[3])"
+                [class.ring-1]="currentAsztal?.id === asztalok[3].id"
+                [class.ring-orange-300]="currentAsztal?.id === asztalok[3].id"
+                class="flex flex-col backdrop-blur-sm bg-green-200/5 p-0.5 rounded-xl items-center hover:scale-105 transition-all duration-300 cursor-pointer pointer-events-auto"
+              >
+                <p class="text-xs font-bold text-[#755e3f] mb-1">
+                  2 fős asztal
+                </p>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/312/312688.png"
+                  alt=""
+                  class="w-12 h-10"
+                />
+              </div>
+
+              <!-- Asztal 2 -->
+              <div
+                (click)="handleASztalChange(asztalok[4])"
+                [class.ring-1]="currentAsztal?.id === asztalok[4].id"
+                [class.ring-orange-300]="currentAsztal?.id === asztalok[4].id"
+                class="flex flex-col backdrop-blur-sm bg-green-200/5 p-0.5 rounded-xl items-center hover:scale-105 transition-all duration-300 cursor-pointer pointer-events-auto"
+              >
+                <p class="text-xs font-bold text-[#755e3f] mb-1">
+                  2 fős asztal
+                </p>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/312/312688.png"
+                  alt=""
+                  class="w-10 h-10"
+                />
+              </div>
+
+              <!-- Asztal 3 -->
+              <div
+                (click)="handleASztalChange(asztalok[5])"
+                [class.ring-1]="currentAsztal?.id === asztalok[5].id"
+                [class.ring-orange-300]="currentAsztal?.id === asztalok[5].id"
+                class="flex flex-col backdrop-blur-sm bg-green-200/5 p-0.5 rounded-xl items-center hover:scale-105 transition-all duration-300 cursor-pointer pointer-events-auto"
+              >
+                <p class="text-xs font-bold text-[#755e3f] mb-1">
+                  2 fős asztal
+                </p>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/312/312688.png"
+                  alt=""
+                  class="w-10 h-10"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="absolute top-0 left-50 w-full h-full flex items-center justify-center pointer-events-none"
+          >
+            <div class="flex flex-col space-y-4">
+              <!-- Asztal 1 -->
+              <div
+                (click)="handleASztalChange(asztalok[0])"
+                [class.ring-1]="currentAsztal?.id === asztalok[0].id"
+                [class.ring-orange-300]="currentAsztal?.id === asztalok[0].id"
+                class="flex flex-col backdrop-blur-sm bg-green-200/5 p-0.5 rounded-xl items-center hover:scale-105 transition-all duration-300 cursor-pointer pointer-events-auto"
+              >
+                <p class="text-xs font-bold text-[#755e3f] mb-1">
+                  2 fős asztal
+                </p>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/312/312688.png"
+                  alt=""
+                  class="w-10 h-10"
+                />
+              </div>
+
+              <!-- Asztal 2 -->
+              <div
+                (click)="handleASztalChange(asztalok[1])"
+                [class.ring-1]="currentAsztal?.id === asztalok[1].id"
+                [class.ring-orange-300]="currentAsztal?.id === asztalok[1].id"
+                class="flex flex-col backdrop-blur-sm bg-green-200/5 p-0.5 rounded-xl items-center hover:scale-105 transition-all duration-300 cursor-pointer pointer-events-auto"
+              >
+                <p class="text-xs font-bold text-[#755e3f] mb-1">
+                  2 fős asztal
+                </p>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/312/312688.png"
+                  alt=""
+                  class="w-10 h-10"
+                />
+              </div>
+
+              <!-- Asztal 3 -->
+              <div
+                (click)="handleASztalChange(asztalok[2])"
+                [class.ring-1]="currentAsztal?.id === asztalok[2].id"
+                [class.ring-orange-300]="currentAsztal?.id === asztalok[2].id"
+                class="flex flex-col backdrop-blur-sm bg-green-200/5 p-0.5 rounded-xl items-center hover:scale-105 transition-all duration-300 cursor-pointer pointer-events-auto"
+              >
+                <p class="text-xs font-bold text-[#755e3f] mb-1">
+                  2 fős asztal
+                </p>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/312/312688.png"
+                  alt=""
+                  class="w-10 h-10"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jobb oldal - Foglalási részletek -->
+      <div
+        class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-xl p-6"
+      >
+        <div
+          *ngIf="!currentAsztal"
+          class="flex flex-col items-center justify-center h-full text-center"
+        >
+          <div class="bg-gray-900/50 rounded-full p-12 mb-6">
+            <svg
+              class="w-24 h-24 text-gray-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3">Válassz asztalt!</h3>
+          <p class="text-gray-400">
+            Kattints egy asztalra a foglalás megkezdéséhez
+          </p>
+        </div>
+
+        <div *ngIf="currentAsztal" class="space-y-6">
+          <div class="text-center pb-6 border-b border-gray-700">
+            <h2 class="text-3xl font-bold text-white mb-2">
+              {{ currentAsztal.number }}. számú asztal
+            </h2>
+            <div class="flex items-center justify-center gap-2 text-gray-400">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                ></path>
+              </svg>
+              <span class="text-lg">{{ currentAsztal.seats }} férőhely</span>
+            </div>
+          </div>
+
+          <!-- Foglalási információk -->
+          <div class="space-y-4">
+            <div class="bg-gray-900/50 rounded-xl p-4">
+              <label class="block text-sm font-semibold text-gray-400 mb-2">
+                Foglalás dátuma
+              </label>
+              <input
+                type="date"
+                [(ngModel)]="selectedDate"
+                [min]="minDate"
+                class="w-full bg-gray-800 border border-gray-700 text-white text-lg rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent p-4"
+                required
+              />
+            </div>
+
+            <!-- Időpont -->
+            <div class="bg-gray-900/50 rounded-xl p-4">
+              <label class="block text-sm font-semibold text-gray-400 mb-2">
+                Érkezési időpont
+              </label>
+              <input
+                type="time"
+                [(ngModel)]="selectedTime"
+                min="18:00"
+                max="20:00"
+                class="w-full bg-gray-800 border border-gray-700 text-white text-lg rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent p-4"
+                required
+              />
+              <p class="text-xs text-gray-500 mt-2">
+                Kérjük válassz 18:00 és 20:00 közötti időpontot
+              </p>
+            </div>
+
+            <div class="bg-gray-900/50 rounded-xl p-4">
+              <label class="block text-sm font-semibold text-gray-400 mb-2">
+                Foglalási díj
+              </label>
+              <div class="flex items-baseline gap-2">
+                <span class="text-3xl font-bold text-yellow-400">10 000</span>
+                <span class="text-gray-400">Ft</span>
+              </div>
+            </div>
+
+            <div class="bg-blue-900/30 border border-blue-700 rounded-xl p-4">
+              <div class="flex items-start gap-3">
+                <svg
+                  class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <div class="text-sm">
+                  <p class="text-blue-400 font-semibold mb-1">Tudnivalók</p>
+                  <p class="text-gray-300">
+                    A foglalás a kiválasztott dátumra érvényes. Érkezés:
+                    18:00-20:00 között.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gombok -->
+          <div class="space-y-3 pt-4">
+            <button
+              (click)="handleFoglalas()"
+              [disabled]="!selectedDate"
+              class="w-full bg-yellow-400 hover:bg-yellow-500 disabled:bg-gray-600 disabled:cursor-not-allowed text-[#755e3f] font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              Foglalás megerősítése
+            </button>
+
+            <button
+              (click)="currentAsztal = null"
+              class="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+              Mégse
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sikeres foglalás popup -->
+    <div
+      *ngIf="showSuccessPopup && successfulReservation"
+      class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+      (click)="closeSuccessPopup()"
+    >
+      <div
+        class="bg-gray-800 border border-gray-700 rounded-2xl shadow-2xl max-w-2xl w-full p-8 transform transition-all"
+        (click)="$event.stopPropagation()"
+      >
+        <!-- Siker ikon -->
+        <div class="text-center mb-6">
+          <div
+            class="inline-flex items-center justify-center w-20 h-20 bg-green-500/20 rounded-full mb-4"
+          >
+            <svg
+              class="w-10 h-10 text-green-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"
+              ></path>
+            </svg>
+          </div>
+          <h2 class="text-3xl font-bold text-white mb-2">Sikeres foglalás!</h2>
+          <p class="text-gray-400">A foglalás sikeresen rögzítésre került</p>
+        </div>
+
+        <!-- Foglalás részletei -->
+        <div class="space-y-4 mb-6">
+          <!-- Foglalási azonosító -->
+          <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-400 text-sm">Foglalási azonosító</span>
+              <span class="text-yellow-400 font-bold text-lg"
+                >#{{ successfulReservation.id }}</span
+              >
+            </div>
+          </div>
+
+          <!-- Dátum és időpont -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+              <div class="flex items-center gap-2 mb-2">
+                <svg
+                  class="w-5 h-5 text-yellow-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <span class="text-gray-400 text-sm">Dátum</span>
+              </div>
+              <p class="text-white font-semibold">
+                {{ successfulReservation.date }}
+              </p>
+            </div>
+
+            <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+              <div class="flex items-center gap-2 mb-2">
+                <svg
+                  class="w-5 h-5 text-yellow-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+                <span class="text-gray-400 text-sm">Időpont</span>
+              </div>
+              <p class="text-white font-semibold">
+                {{ successfulReservation.time.substring(0, 5) }}
+              </p>
+            </div>
+          </div>
+
+          <!-- Asztal és vendégek -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+              <div class="flex items-center gap-2 mb-2">
+                <svg
+                  class="w-5 h-5 text-yellow-400"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                  ></path>
+                </svg>
+                <span class="text-gray-400 text-sm">Asztal száma</span>
+              </div>
+              <p class="text-white font-semibold">
+                {{ successfulReservation.tableNumber }}. asztal
+              </p>
+            </div>
+
+            <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+              <div class="flex items-center gap-2 mb-2">
+                <svg
+                  class="w-5 h-5 text-yellow-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                  ></path>
+                </svg>
+                <span class="text-gray-400 text-sm">Férőhelyek</span>
+              </div>
+              <p class="text-white font-semibold">
+                {{ successfulReservation.seats }} fő
+              </p>
+            </div>
+          </div>
+
+          <!-- Vendég adatok -->
+          <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+            <div class="flex items-center gap-2 mb-3">
+              <svg
+                class="w-5 h-5 text-yellow-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
+              </svg>
+              <span class="text-gray-400 text-sm">Vendég adatok</span>
+            </div>
+            <p class="text-white font-semibold mb-1">
+              {{ successfulReservation.userName }}
+            </p>
+            <p class="text-gray-400 text-sm">
+              {{ successfulReservation.userEmail }}
+            </p>
+          </div>
+
+          <!-- Foglalási díj -->
+          <div class="bg-gray-900/50 rounded-xl p-4 border border-gray-700">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-400">Foglalási díj</span>
+              <span class="text-2xl font-bold text-yellow-400"
+                >{{
+                  successfulReservation.price.toLocaleString("hu-HU")
+                }}
+                Ft</span
+              >
+            </div>
+          </div>
+
+          <!-- Info -->
+          <div class="bg-blue-900/30 border border-blue-700 rounded-xl p-4">
+            <div class="flex items-start gap-3">
+              <svg
+                class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <div class="text-sm">
+                <p class="text-blue-400 font-semibold mb-1">
+                  Fontos információ
+                </p>
+                <p class="text-gray-300">
+                  A foglalási visszaigazolást e-mailben is elküldtük. Kérjük,
+                  érkezzen a megadott időpontra!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gombok -->
+        <div class="space-y-3">
+          <button
+            (click)="downloadReservation()"
+            class="w-full bg-yellow-400 hover:bg-yellow-500 text-[#755e3f] font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+              ></path>
+            </svg>
+            Letöltés
+          </button>
+
+          <button
+            (click)="closeSuccessPopup()"
+            class="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+          >
+            Bezárás
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

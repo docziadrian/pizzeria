@@ -12,6 +12,8 @@ import { adminGuard } from './Guards/admin.guard';
 import { FelhasznaloKezelesComponent } from './Components/admin/felhasznalo-kezeles/felhasznalo-kezeles.component';
 import { RendelesekKezeleseComponent } from './Components/admin/rendelesek-kezelese/rendelesek-kezelese.component';
 import { StatisztikakComponent } from './Components/admin/statisztikak/statisztikak.component';
+import { FoglalasComponent } from './Components/pages/foglalas/foglalas.component';
+import { ErtekelesirasaComponent } from './Components/pages/ertekelesirasa/ertekelesirasa.component';
 
 export const routes: Routes = [
   {
@@ -66,6 +68,16 @@ export const routes: Routes = [
     path: 'admin/statisztikak',
     component: StatisztikakComponent,
     canActivate: [adminGuard],
+  },
+  {
+    path: 'foglalas',
+    component: FoglalasComponent,
+    canActivate: [authGuard],
+  },
+  {
+    path: 'ertekeles',
+    component: ErtekelesirasaComponent,
+    canActivate: [authGuard],
   },
   {
     path: '**',

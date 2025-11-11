@@ -1,0 +1,260 @@
+<div
+  class="min-h-screen bg-gradient-to-b from-gray-900 to-black py-12 px-4 -mt-2"
+>
+  <div class="container mx-auto max-w-6xl">
+    <!-- Fejléc -->
+    <div class="text-center mb-12">
+      <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+        Értékelés <span class="text-yellow-400">írása</span>
+      </h1>
+      <p class="text-xl text-gray-300">
+        Oszd meg velünk a véleményedet a pizzáinkról!
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+      <!-- Bal oldal - Megrendelt pizzák -->
+      <div
+        class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-xl p-6"
+      >
+        <h2 class="text-2xl font-bold text-white mb-6">Megrendelt pizzáid</h2>
+
+        <div *ngIf="orderedPizzas.length === 0" class="text-center py-12">
+          <svg
+            class="w-20 h-20 text-gray-600 mx-auto mb-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
+            ></path>
+          </svg>
+          <p class="text-gray-400">Még nem rendeltél pizzát!</p>
+        </div>
+
+        <div class="space-y-3">
+          <div
+            *ngFor="let pizza of orderedPizzas"
+            (click)="selectPizza(pizza)"
+            [class.ring-2]="selectedPizza?.id === pizza.id"
+            [class.ring-yellow-400]="selectedPizza?.id === pizza.id"
+            class="flex items-center gap-4 bg-gray-900/50 rounded-xl p-4 cursor-pointer hover:bg-gray-900/70 transition-all duration-300"
+          >
+            <img
+              [src]="pizza.image"
+              [alt]="pizza.name"
+              class="w-16 h-16 rounded-lg object-cover"
+            />
+            <div class="flex-1">
+              <h3 class="text-white font-semibold">{{ pizza.name }}</h3>
+            </div>
+            <svg
+              *ngIf="selectedPizza?.id === pizza.id"
+              class="w-6 h-6 text-yellow-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jobb oldal - Értékelés űrlap -->
+      <div
+        class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-xl p-6"
+      >
+        <h2 class="text-2xl font-bold text-white mb-6">Értékelés írása</h2>
+
+        <div
+          *ngIf="!selectedPizza"
+          class="flex flex-col items-center justify-center h-64 text-center"
+        >
+          <svg
+            class="w-20 h-20 text-gray-600 mb-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+            ></path>
+          </svg>
+          <p class="text-gray-400">Válassz egy pizzát az értékeléshez!</p>
+        </div>
+
+        <form
+          *ngIf="selectedPizza"
+          (ngSubmit)="submitReview()"
+          class="space-y-6"
+        >
+          <!-- Kiválasztott pizza -->
+          <div class="bg-gray-900/50 rounded-xl p-4">
+            <p class="text-sm text-gray-400 mb-2">Értékeled:</p>
+            <p class="text-xl font-bold text-white">{{ selectedPizza.name }}</p>
+          </div>
+
+          <!-- Csillagok -->
+          <div class="bg-gray-900/50 rounded-xl p-4">
+            <label class="block text-sm font-semibold text-gray-400 mb-3">
+              Értékelés (1-5 csillag)
+            </label>
+            <div class="flex gap-2">
+              <button
+                *ngFor="let star of [1, 2, 3, 4, 5]"
+                type="button"
+                (click)="setRating(star)"
+                (mouseenter)="setHoverRating(star)"
+                (mouseleave)="clearHoverRating()"
+                class="focus:outline-none transition-transform hover:scale-110"
+              >
+                <svg
+                  class="w-12 h-12 transition-colors"
+                  [class.text-yellow-400]="star <= (hoverRating || rating)"
+                  [class.text-gray-600]="star > (hoverRating || rating)"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <p *ngIf="rating > 0" class="text-yellow-400 font-semibold mt-2">
+              {{ rating }} csillag
+            </p>
+          </div>
+
+          <!-- Vélemény -->
+          <div class="bg-gray-900/50 rounded-xl p-4">
+            <label class="block text-sm font-semibold text-gray-400 mb-3">
+              Vélemény
+            </label>
+            <textarea
+              [(ngModel)]="comment"
+              name="comment"
+              rows="5"
+              placeholder="Írd le a véleményedet..."
+              class="w-full bg-gray-800 border border-gray-700 text-white rounded-xl focus:ring-2 focus:ring-yellow-400 focus:border-transparent p-4 resize-none"
+              required
+            ></textarea>
+          </div>
+
+          <!-- Gombok -->
+          <div class="space-y-3">
+            <button
+              type="submit"
+              [disabled]="rating === 0 || !comment.trim()"
+              class="w-full bg-yellow-400 hover:bg-yellow-500 disabled:bg-gray-600 disabled:cursor-not-allowed text-gray-900 font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                ></path>
+              </svg>
+              Értékelés elküldése
+            </button>
+
+            <button
+              type="button"
+              (click)="selectedPizza = null; rating = 0; comment = ''"
+              class="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 px-6 rounded-full transition-all duration-300"
+            >
+              Mégse
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Korábbi értékelések -->
+    <div *ngIf="userReviews.length > 0" class="mt-12">
+      <h2 class="text-3xl font-bold text-white mb-6">Korábbi értékeléseid</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div
+          *ngFor="let review of userReviews"
+          class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl shadow-xl p-6"
+        >
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="text-xl font-bold text-white mb-2">
+                {{ review.pizzaName }}
+              </h3>
+              <div class="flex items-center gap-2">
+                <div class="flex">
+                  <svg
+                    *ngFor="let star of getStarsArray(review.rating)"
+                    class="w-5 h-5 text-yellow-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    ></path>
+                  </svg>
+                  <svg
+                    *ngFor="let star of getEmptyStarsArray(review.rating)"
+                    class="w-5 h-5 text-gray-600"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    ></path>
+                  </svg>
+                </div>
+                <span class="text-gray-400 text-sm">{{ review.rating }}/5</span>
+              </div>
+            </div>
+            <button
+              (click)="deleteReview(review.id!)"
+              class="text-red-400 hover:text-red-300 transition-colors"
+              title="Törlés"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <p class="text-gray-300 mb-4">{{ review.comment }}</p>
+
+          <p class="text-sm text-gray-500">
+            {{ formatDate(review.createdAt || "") }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

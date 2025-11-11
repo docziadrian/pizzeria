@@ -4,4 +4,8 @@ export interface Pizza {
   ar: number;
   kepURL: string;
   hozzavalok: string[];
+  averageRating?: number;
+  reviewCount?: number;
+  videoURL?: string;
+  isHovering?: boolean;
 }

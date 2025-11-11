@@ -29,8 +29,8 @@ export class PizzaMegjelenitComponent implements OnInit {
         let hozzaValokArray: string[] = [];
         response.data.forEach((pizza: any) => {
           hozzaValokArray = pizza.hozzavalok.split(',');
-
           pizza.hozzavalok = hozzaValokArray.map((item) => item.trim());
+          pizza.isHovering = false; // Inicializálás
         });
         this.allPizza = response.data;
       });
@@ -49,5 +49,24 @@ export class PizzaMegjelenitComponent implements OnInit {
       imgUrl: pizza.kepURL,
     };
     this.localStorageService.addItem(pizzaToAdd);
+  }
+
+  // Mouse hover kezelés
+  onMouseEnter(pizza: any) {
+    pizza.isHovering = true;
+  }
+
+  onMouseLeave(pizza: any) {
+    pizza.isHovering = false;
+  }
+
+  // Csillagok array generálása
+  getStarsArray(rating: number): number[] {
+    return Array(Math.floor(rating)).fill(0);
+  }
+
+  // Üres csillagok array
+  getEmptyStarsArray(rating: number): number[] {
+    return Array(5 - Math.floor(rating)).fill(0);
   }
 }
