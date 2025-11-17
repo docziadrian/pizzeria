@@ -1,5 +1,8 @@
 const express = require("express");
 const router = express.Router();
+
+const nodemailer = require("nodemailer");
+
 const { query } = require("../utils/database");
 const logger = require("../utils/logger");
 const SHA1 = require("crypto-js/sha1");
@@ -78,6 +81,30 @@ router.post("/:table/registration", (req, res) => {
           logger.verbose(
             `[POST /${table}/registration] -> 1 új felhasználó regisztrálva.`
           );
+
+          //Itt fogja küldeni az emailt
+          const transporter = nodemailer.createTransport({
+            host: "smtp.ethereal.email",
+            port: 587,
+            secure: false,
+            auth: {
+              user: "maddison53@ethereal.email",
+              pass: "jn7jnAPss4f63QBp6D",
+            },
+          });
+
+          (async () => {
+            const info = await transporter.sendMail({
+              from: '"Maddison Foo Koch" <maddison53@ethereal.email>',
+              to: "bar@example.com, baz@example.com",
+              subject: "Hello ✔",
+              text: "Hello world?", // plain‑text body
+              html: "<b>Hello world?</b>", // HTML body
+            });
+
+            console.log("Message sent:", info.messageId);
+          })();
+
           res
             .status(200)
             .send({ success: true, message: "Sikeres regisztráció!" });

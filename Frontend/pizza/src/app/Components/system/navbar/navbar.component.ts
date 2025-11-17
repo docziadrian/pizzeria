@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SessionService } from '../../../Services/session.service';
 import { LocalstorageService } from '../../../Services/localstorage.service';
+import { KosarService } from '../../../Services/kosar.service';
 
 interface InfoItem {
   icon: string;
@@ -20,7 +21,8 @@ interface InfoItem {
 export class NavbarComponent implements OnInit {
   constructor(
     private sessionService: SessionService,
-    private localStorageService: LocalstorageService
+    private localStorageService: LocalstorageService,
+    private kosarService: KosarService
   ) {}
   @Input() title = '';
 
@@ -38,7 +40,7 @@ export class NavbarComponent implements OnInit {
 
   UserNavItems = [
     { name: 'Főoldal', link: '/' },
-    { name: 'Pizzák', link: '/pizzak' },
+    { name: 'Étlap', link: '/etlap' },
     { name: 'Profil', link: '/fiokom' },
     { name: 'Foglalás', link: '/foglalas' },
     { name: 'Értékelés', link: '/ertekeles' },
@@ -49,6 +51,7 @@ export class NavbarComponent implements OnInit {
 
   PlusMenuForAdmins = [
     { name: 'Főoldal', link: '/' },
+    { name: 'Étlap', link: '/etlap' },
     { name: 'Pizzák', link: '/pizzak' },
     { name: 'Pizza felvesz', link: '/pizzak/felvesz' },
     { name: 'Profil', link: '/fiokom' },
@@ -62,32 +65,18 @@ export class NavbarComponent implements OnInit {
     const user = this.sessionService.getUser();
     let navItems = [];
 
-    //TODO: Feliratkozás a localstorage service-re, hogy frissüljön a kosár mennyiség
-    this.localStorageService.pizzas$.subscribe((items) => {
-      const totalAmount = items.reduce(
-        (sum: number, item: any) => sum + Number(item.amount),
-        0
-      );
-      this.cartAmount = totalAmount;
-    });
+    this.cartAmount = this.kosarService.getKosarCount();
 
     if (user) {
       this.isUserLoggedIn = true;
-      // User be van lépve
       navItems = [...this.UserNavItems];
 
-      // Ha admin, akkor ...
       if (user.role.role === 'admin') {
-        navItems = [navItems, ...this.PlusMenuForAdmins];
+        navItems = [...this.PlusMenuForAdmins];
       }
     } else {
-      // NINCS BELÉPVE A USER
       navItems = [...this.NoUserNavItems];
     }
-
-    // Kosár amount
-    const cartAmount = this.localStorageService.updateCartInNavbar();
-    this.cartAmount = cartAmount;
 
     this.navbarItems = navItems;
   }

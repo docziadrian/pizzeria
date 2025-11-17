@@ -4,6 +4,7 @@ import { PizzaFelveszComponent } from './Components/pages/pizza/pizza-felvesz/pi
 import { RegistrationComponent } from './Components/pages/registration/registration.component';
 import { LoginComponent } from './Components/pages/login/login.component';
 import { LandingPageComponent } from './Components/pages/landing-page/landing-page.component';
+import { EtlapFullComponent } from './Components/pages/etlap-full/etlap-full.component';
 import { ProfileOverviewComponent } from './Components/user/profile-overview/profile-overview.component';
 import { ShoppingCartComponent } from './Components/shopping-cart/shopping-cart.component';
 import { AdminDashboardComponent } from './Components/admin/admin-dashboard/admin-dashboard.component';
@@ -20,7 +21,10 @@ export const routes: Routes = [
     path: '',
     component: LandingPageComponent,
   },
-
+  {
+    path: 'etlap',
+    component: EtlapFullComponent,
+  },
   {
     path: 'pizzak',
     component: PizzaMegjelenitComponent,

@@ -129,6 +129,13 @@
                     ></path>
                   </svg>
                 </button>
+                <button
+                  (click)="deleteUser(user.id)"
+                  class="text-red-600 hover:text-orange-900 transition-colors duration-150 mx-5"
+                  title="Tiltás"
+                >
+                  <h1>Tiltás</h1>
+                </button>
               </td>
             </tr>
             <tr *ngIf="filteredUsers.length === 0">

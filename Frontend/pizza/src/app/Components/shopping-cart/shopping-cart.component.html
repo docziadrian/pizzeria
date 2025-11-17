@@ -2,16 +2,14 @@
   class="min-h-screen bg-gradient-to-b from-gray-900 to-black py-12 px-4 -mt-2"
 >
   <div class="container mx-auto max-w-6xl">
-    <!-- Fejléc -->
     <div class="text-center mb-12">
       <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
-        Kosár <span class="text-yellow-400">Áttekintés</span>
+        Kosár <span class="text-[#c2e22a]">Áttekintés</span>
       </h1>
       <p class="text-xl text-gray-300">Ellenőrizd és finalizáld rendelésedet</p>
     </div>
 
-    <!-- Üres kosár üzenet -->
-    <div *ngIf="allPizzasInCart.length === 0" class="text-center py-20">
+    <div *ngIf="kosarItems.length === 0" class="text-center py-20">
       <div
         class="bg-gray-800/50 backdrop-blur-sm rounded-full p-12 mb-8 inline-block"
       >
@@ -31,11 +29,11 @@
       </div>
       <h2 class="text-3xl font-bold text-white mb-4">A kosarad üres</h2>
       <p class="text-xl text-gray-400 mb-8">
-        Adj hozzá pizzákat a rendeléshez!
+        Adj hozzá ételeket a rendeléshez!
       </p>
       <a
-        href="/pizzak"
-        class="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-full transition-all duration-300"
+        href="/etlap"
+        class="inline-flex items-center gap-2 bg-[#c2e22a] hover:bg-yellow-500 text-gray-900 font-bold py-4 px-8 rounded-full transition-all duration-300"
       >
         <svg
           class="w-5 h-5"
@@ -50,60 +48,36 @@
             d="M12 6v6m0 0v6m0-6h6m-6 0H6"
           ></path>
         </svg>
-        Pizzák böngészése
+        Étlap böngészése
       </a>
     </div>
 
-    <!-- Kosár tartalom -->
-    <div *ngIf="allPizzasInCart.length > 0" class="grid lg:grid-cols-3 gap-8">
-      <!-- Kosár elemek -->
+    <div *ngIf="kosarItems.length > 0" class="grid lg:grid-cols-3 gap-8">
       <div class="lg:col-span-2 space-y-4">
         <div
-          *ngFor="let item of allPizzasInCart"
+          *ngFor="let item of kosarItems"
           class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-gray-600 transition-all duration-300"
         >
-          <div class="flex flex-col md:flex-row items-center gap-6">
-            <!-- Kép -->
-            <div
-              class="relative overflow-hidden rounded-xl w-full md:w-32 h-32 flex-shrink-0"
-            >
-              <img
-                [src]="item.imgUrl"
-                [alt]="item.name"
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent"
-              ></div>
-            </div>
+          <div class="flex flex-col md:flex-row items-start gap-6">
+            
+            
 
-            <!-- Pizza információk -->
-            <div class="flex-1 text-center md:text-left">
-              <h2 class="text-2xl font-bold text-white mb-2">
-                {{ item.name }}
-              </h2>
-              <div
-                class="flex items-center gap-2 justify-center md:justify-start"
-              >
-                <span class="text-2xl font-bold text-yellow-400">{{
-                  item.price | number
-                }}</span>
-                <span class="text-gray-400">Ft / db</span>
-              </div>
-            </div>
-
-            <!-- Mennyiség kezelés -->
-            <div class="flex flex-col items-center gap-4">
-              <div
-                class="flex items-center gap-3 bg-gray-900/50 rounded-full p-2"
-              >
+            <div class="flex-1 w-full">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h2 class="text-2xl font-bold text-white mb-1">
+                    {{ item.termekNev }}
+                  </h2>
+                  <span class="text-sm text-gray-400">{{
+                    item.kategoriaNev
+                  }}</span>
+                </div>
                 <button
-                  (click)="decreaseQuantity(item.id)"
-                  class="w-10 h-10 rounded-full bg-gray-700 hover:bg-gray-600 flex items-center justify-center transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-                  [disabled]="item.amount <= 1"
+                  (click)="deleteItem(item.id!)"
+                  class="text-red-500 hover:text-red-400 transition-colors"
                 >
                   <svg
-                    class="w-5 h-5 text-white"
+                    class="w-6 h-6"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -112,232 +86,205 @@
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
-                      d="M20 12H4"
+                      d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
                     ></path>
                   </svg>
+                </button>
+              </div>
+
+              <div
+                class="flex items-center gap-3 bg-gray-900/50 rounded-full p-2 mb-4 w-fit"
+              >
+                <button
+                  (click)="decreaseQuantity(item)"
+                  class="w-8 h-8 rounded-full bg-gray-700 hover:bg-gray-600 flex items-center justify-center text-white transition-colors"
+                >
+                  −
                 </button>
                 <span
-                  class="text-2xl font-bold text-white min-w-[3rem] text-center"
-                  >{{ item.amount }}</span
+                  class="text-white font-bold text-lg min-w-[40px] text-center"
+                  >{{ item.mennyiseg }}</span
                 >
                 <button
-                  (click)="increaseQuantity(item.id)"
-                  class="w-10 h-10 rounded-full bg-yellow-400 hover:bg-yellow-500 flex items-center justify-center transition-colors duration-200"
+                  (click)="increaseQuantity(item)"
+                  class="w-8 h-8 rounded-full bg-[#c2e22a] hover:bg-yellow-500 flex items-center justify-center text-gray-900 transition-colors"
                 >
-                  <svg
-                    class="w-5 h-5 text-gray-900"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 4v16m8-8H4"
-                    ></path>
-                  </svg>
+                  +
                 </button>
               </div>
 
-              <!-- Összár -->
-              <div class="text-center bg-gray-900/50 rounded-xl px-4 py-2">
-                <p class="text-sm text-gray-400 mb-1">Összesen</p>
-                <p class="text-2xl font-bold text-yellow-400">
-                  {{ item.price * item.amount | number }} Ft
+              <button
+                (click)="toggleEdit(item.id!)"
+                class="text-[#c2e22a] hover:text-yellow-500 font-semibold flex items-center gap-2 mb-4"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+                  ></path>
+                </svg>
+                Szerkesztés
+              </button>
+
+              <div
+                *ngIf="editingItemId === item.id"
+                class="space-y-4 p-4 bg-gray-900/50 rounded-lg"
+              >
+                <div *ngIf="item.hozzavalok.length > 0">
+                  <h4 class="text-white font-semibold mb-2">Hozzávalók:</h4>
+                  <div class="grid grid-cols-2 gap-2">
+                    <div
+                      *ngFor="let hozzavalo of item.hozzavalok; let i = index"
+                      (click)="toggleHozzavalo(item, i)"
+                      [ngClass]="{
+                        'bg-[#c2e22a]/20': hozzavalo.selected,
+                        'border-[#c2e22a]': hozzavalo.selected,
+                        'border-gray-600': !hozzavalo.selected
+                      }"
+                      class="flex items-center gap-2 p-2 rounded border cursor-pointer hover:border-[#c2e22a] transition-all"
+                    >
+                    <div
+                      [ngClass]="{
+                        'bg-[#c2e22a]': hozzavalo.selected,
+                        'border-gray-500': !hozzavalo.selected
+                      }"
+                      class="w-4 h-4 rounded border-2 flex items-center justify-center flex-shrink-0"
+                    >
+                      <svg
+                        *ngIf="hozzavalo.selected"
+                        class="w-3 h-3 text-gray-900"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="3"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                    </div>
+                    <span class="text-white text-sm">{{ hozzavalo.nev }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div *ngIf="item.extras.length > 0">
+                <h4 class="text-white font-semibold mb-2">Extra hozzávalók:</h4>
+                <div class="space-y-2">
+                  <div
+                    *ngFor="let extra of item.extras; let i = index"
+                    class="flex items-center justify-between p-3 bg-gray-800 rounded-lg"
+                  >
+                    <div>
+                      <span class="text-white font-medium">{{
+                        extra.extra.nev
+                      }}</span>
+                      <span class="text-[#c2e22a] text-sm ml-2"
+                        >+{{ extra.extra.ar }} Ft</span
+                      >
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <button
+                        (click)="decrementExtra(item, i)"
+                        class="w-6 h-6 rounded-full bg-gray-700 hover:bg-gray-600 flex items-center justify-center text-white"
+                      >
+                        −
+                      </button>
+                      <span class="text-white w-6 text-center">{{
+                        extra.mennyiseg
+                      }}</span>
+                      <button
+                        (click)="incrementExtra(item, i)"
+                        class="w-6 h-6 rounded-full bg-[#c2e22a] hover:bg-yellow-500 flex items-center justify-center text-gray-900"
+                      >
+                        +
+                      </button>
+                      <button
+                        (click)="removeExtra(item, i)"
+                        class="ml-2 w-6 h-6 rounded-full bg-red-600 hover:bg-red-500 flex items-center justify-center text-white"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div *ngIf="item.megjegyzes">
+                <h4 class="text-white font-semibold mb-2">Megjegyzés:</h4>
+                <p class="text-gray-300 text-sm italic">
+                  {{ item.megjegyzes }}
                 </p>
               </div>
             </div>
 
-            <!-- Törlés gomb -->
-            <button
-              (click)="deleteItem(item.id)"
-              class="p-3 text-red-400 hover:bg-red-900/30 rounded-xl transition-all duration-200 border border-red-900/50 hover:border-red-700"
-              title="Törlés"
-            >
-              <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+            <div class="mt-4 flex justify-between items-center">
+              <span class="text-gray-400">Alap ár:</span>
+              <span class="text-white font-semibold">{{ item.alapAr }} Ft</span>
+            </div>
+            <div class="mt-1 flex justify-between items-center">
+              <span class="text-gray-400">Végösszeg:</span>
+              <span class="text-[#c2e22a] font-bold text-2xl"
+                >{{ item.vegosszeg }} Ft</span
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                ></path>
-              </svg>
-            </button>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Összegzés oldalsó panel -->
-      <div class="lg:col-span-1">
-        <div
-          class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 sticky top-24"
-        >
-          <h3 class="text-2xl font-bold text-white mb-6">
-            Rendelés összegzése
-          </h3>
+    <div class="lg:col-span-1">
+      <div
+        class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 sticky top-24"
+      >
+        <h2 class="text-2xl font-bold text-white mb-6">Összesítő</h2>
 
-          <!-- Részletek -->
-          <div class="space-y-4 mb-6">
-            <div
-              class="flex justify-between items-center pb-4 border-b border-gray-700"
-            >
-              <span class="text-gray-400">Pizzák száma:</span>
-              <span class="text-xl font-bold text-white"
-                >{{ getTotalItems() }} db</span
-              >
-            </div>
-
-            <div
-              class="flex justify-between items-center pb-4 border-b border-gray-700"
-            >
-              <span class="text-gray-400">Részösszeg:</span>
-              <span class="text-xl font-bold text-white"
-                >{{ getTotalPrice() | number }} Ft</span
-              >
-            </div>
-
-            <div
-              class="flex justify-between items-center pb-4 border-b border-gray-700"
-            >
-              <span class="text-gray-400">Szállítás:</span>
-              <span
-                [ngClass]="
-                  getTotalPrice() >= 10000
-                    ? 'bg-green-900/50 p-2'
-                    : 'bg-yellow-900 p-2'
-                "
-                class="text-lg text-white font-semibold"
-              >
-                {{ getTotalPrice() >= 10000 ? "Ingyenes" : "500 Ft" }}
-              </span>
-            </div>
-
-            <div class="flex justify-between items-center pt-4">
-              <span class="text-xl font-bold text-white">Végösszeg:</span>
-              <span class="text-3xl font-bold text-yellow-400">
-                {{
-                  getTotalPrice() >= 10000
-                    ? (getTotalPrice() | number)
-                    : (getTotalPrice() + 500 | number)
-                }}
-                Ft
-              </span>
-            </div>
+        <div class="space-y-4 mb-6">
+          <div class="flex justify-between text-gray-300">
+            <span>Tételek száma:</span>
+            <span class="font-semibold">{{ getTotalItems() }} db</span>
           </div>
-
-          <!-- Kupon kód (opcionális) -->
-          <div class="mb-6">
-            <label class="block text-sm font-semibold text-gray-400 mb-2"
-              >Kupon kód</label
-            >
-            <div class="flex gap-2">
-              <input
-                type="text"
-                placeholder="Adj meg kupon kódot"
-                class="flex-1 bg-gray-900/50 border border-gray-700 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-              />
-            </div>
-            <button
-              class="bg-gray-700 hover:bg-gray-600 text-white px-2 py-3 my-2 rounded-xl transition-colors duration-200 w-full font-semibold"
-            >
-              Alkalmaz
-            </button>
-          </div>
-
-          <!-- Gombok -->
-          <div class="space-y-3">
-            <button
-              (click)="submitOrder()"
-              class="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                ></path>
-              </svg>
-              Rendelés leadása
-            </button>
-
-            <button
-              (click)="clearCart()"
-              class="w-full bg-red-900/50 hover:bg-red-900 text-red-100 border border-red-800 font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                ></path>
-              </svg>
-              Kosár kiürítése
-            </button>
-
-            <a
-              href="/pizzak"
-              class="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-4 px-6 rounded-full transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              <svg
-                class="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
-                ></path>
-              </svg>
-              Vásárlás folytatása
-            </a>
-          </div>
-
-          <!-- Szállítási info -->
-          <div
-            class="mt-6 p-4 bg-gray-900/50 rounded-xl border border-gray-700"
-          >
-            <div class="flex items-start gap-3">
-              <svg
-                class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-              <div class="text-sm">
-                <p class="text-gray-300 font-semibold mb-1">Tudtad?</p>
-                <p class="text-gray-400">
-                  10,000 Ft feletti rendelésnél a szállítás ingyenes!
-                </p>
-              </div>
-            </div>
+          <div class="h-px bg-gray-700"></div>
+          <div class="flex justify-between text-white text-xl font-bold">
+            <span>Végösszeg:</span>
+            <span class="text-[#c2e22a]">{{ getTotalPrice() }} Ft</span>
           </div>
         </div>
+
+        <button
+          (click)="submitOrder()"
+          class="w-full py-4 bg-[#c2e22a] hover:bg-yellow-500 text-gray-900 font-bold rounded-full transition-all duration-300 hover:scale-105 shadow-lg mb-3"
+        >
+          Rendelés Leadása
+        </button>
+
+        <button
+          (click)="clearCart()"
+          class="w-full py-3 bg-red-600/20 hover:bg-red-600 text-red-400 hover:text-white border border-red-600 font-semibold rounded-full transition-all duration-300"
+        >
+          Kosár Ürítése
+        </button>
       </div>
     </div>
   </div>

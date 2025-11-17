@@ -20,8 +20,8 @@ import { NotificationsComponent } from './Components/notifications/notifications
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'Pizzéria';
-  subtitle = 'A legjobb pizzák egy helyen!';
+  title = 'FoodMonster';
+  subtitle = 'Karakteres ízek!';
   company = 'Bajai SZC Türr István Technikum';
   author = 'Dóczi Adrián Márk';
 }
